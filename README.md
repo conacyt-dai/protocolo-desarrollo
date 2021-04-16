@@ -7,8 +7,7 @@
 ### [Toma de requerimientos](toma_de_requerimientos.md)
 
 
-### [Tecnologías y librerías sugeridads (back y front end)](	
-tecnologias_y_librerias.md)
+### [Tecnologías y librerías sugeridads (back y front end)](tecnologias_y_librerias.md)
 Tecnologías
 * Node
 * Geoserver
