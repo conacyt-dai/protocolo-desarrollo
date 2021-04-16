@@ -1,0 +1,1 @@
+# Requerimientos mínimos de documentación de proyectos
