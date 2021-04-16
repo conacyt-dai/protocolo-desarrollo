@@ -7,11 +7,13 @@ El objetivo de este apartado es que el equipo de desarrollo tenga claro cuales s
 A continuación se mencionan algunas de las características que debe tener un requerimiento según Northware [1](https://www.northware.mx/2012/01/15/tecnicas_efectivas_toma_requerimientos/)
 
 * **Necesario:** Si hay alguna duda sobre la necesidad del requerimiento, se puede preguntar ¿Qué sería lo peor de no incluirlo?, si no se encuentra una respuesta o consecuencia, es probable que no sea un requerimiento necesario. 
-Ejemplo: ¿Qué sería lo peor de no usar Jekyll y sólo usar Vue?
+
+	Ejemplo: ¿Qué sería lo peor de no usar Jekyll y sólo usar Vue?
 
 * **Completo:** Se proporciona información suficiente para la comprensión del requerimiento.
 
 * **Consistente:** No se contradice con otro requerimiento
+	
 	Ejemplo de inconsistencias:
 	* Un mapa con sólo front-end que muestre polígonos de AGEBS de todo el país
 	* Que cargue rápido
