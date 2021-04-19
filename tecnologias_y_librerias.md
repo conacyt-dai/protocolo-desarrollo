@@ -30,11 +30,15 @@ Si no lo tienes instalado, puedes instalarlo mediante `nvm` (node version manage
 
     En la consola de tu equipo ejecutar el siguiente comando
     
-    ```wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash```
+    ```
+    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+    ```
     
     Verifica la instalación ejecutando
     
-    ```command -v nvm```
+    ```
+    command -v nvm
+    ```
     
     La respuesta en tu consola a esto debe de ser `nvm`.
     
@@ -46,11 +50,15 @@ Si no lo tienes instalado, puedes instalarlo mediante `nvm` (node version manage
 
     En la consola de tu equipo se ejecuta el siguiente comando para instalar la última versión de `node.js`.
     
-    ```nvm install node```.
+    ```
+    nvm install node
+    ```
     
     Verifica la instalación ejecutando
     
-    ```nvm run node --version```
+    ```
+    nvm run node --version
+    ```
 
     Lo cual te debe de regresar la versión instalada de `node` y de `npm`, como por ejemplo:
     
@@ -61,28 +69,37 @@ Si no lo tienes instalado, puedes instalarlo mediante `nvm` (node version manage
 
     Para instalar una versión es específico de node, por ejemplo la `14.16.1`, escribe en la terminal:
 
-    ```nvm install 14.16.1``` 
+    ```
+    nvm install 14.16.1
+    ``` 
 
     y para cambiarte a la versión instalada escribes:
 
-    ```nvm use 14.16.1``` 
+    ```
+    nvm use 14.16.1
+    ``` 
 
-    puedes hacer modificar la versión que quieres que se use por defecto configurando con los siguiente comandos 
+    puedes configurar la versión que quieres que se use por defecto con los siguiente comandos 
     ```
     nvm alias default 14.16.1
     nvm alias node 14.16.1
     nvm alias stable 14.16.1
     ```
-    
-
-
-   
-
-
 
 
 
 #### Iniciando un proyecto en node.js
+
+`npm` es el sistema de gestión de paquetes por defecto de Node.js. Podemos verificar su instalación con `npm -v`, aunque debería estar ya instalado si se realizaron los pasos de la sección anterior.
+
+Para iniciar el proyecto creamos una carpeta y, en la terminal, ubicado dentro de la carpeta del proyecto escribimos 
+
+```
+npm init
+```
+A continuación nos pedirá ingresar algunas líneas para la configuración inicial de `package.json`, el cual contendrá la información del proyecto, incluendo las dependencias que se pueden instalar posteriormente con `npm`
+
+
 
 Para la instalación de paquetes 
 
