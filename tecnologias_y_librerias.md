@@ -92,16 +92,21 @@ Si no lo tienes instalado, puedes instalarlo mediante `nvm` (node version manage
 
 `npm` es el sistema de gestión de paquetes por defecto de Node.js. Podemos verificar su instalación con `npm -v`, aunque debería estar ya instalado si se realizaron los pasos de la sección anterior.
 
-Para iniciar el proyecto creamos una carpeta y, en la terminal, ubicado dentro de la carpeta del proyecto escribimos 
+Para iniciar el proyecto creamos una carpeta y, en la terminal, ubicades dentro de la carpeta del proyecto escribimos 
 
 ```
 npm init
 ```
 A continuación nos pedirá ingresar algunas líneas para la configuración inicial de `package.json`, el cual contendrá la información del proyecto, incluendo las dependencias que se pueden instalar posteriormente con `npm`
 
+Para la instalación de paquetes se usa `npm install` + el nombre del paquete, que instalará por defecto la última versión. Por ejemplo 
+```
+npm install d3
+```
+Por lo general, el proyecto tendrá una carpeta `src` que es en dónde se alojará el proyecto en desarrollo, incluyendo carpetas de `assets`, `js` y `css`. Por otra parte, se suele crear la carpeta `dist` en proyectos en donde se usan preprocesadores; el contenido de esta carpeta es el que iría a producción.
 
+Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de desarrollo que se explicará más adelante. El uso de esta herramienta nos ayudará a estructurar el proyecto.
 
-Para la instalación de paquetes 
 
 
 
@@ -112,7 +117,246 @@ Para la instalación de paquetes
 
 ## Librerías 
 ### Vue
+
 ### Sass
+Sass (*Syntactically Awesome Stylesheets*) es un metalenguaje de CSS. Permite usar funcionalidades que no existen en CSS, pero todas las funcionalidades de CSS funcionan también en Sass. Esisten dos tipos de formatos que Sass interpreta: `.scss` y `.sass`. La diferencia radica en la sintaxis y [aquí](https://sass-lang.com/documentation/syntax) puedes compararlos. En la DAI se suele usar el formato `.scss`.
+
+Algunas de las funcionalidades básicas que se pueden implementar en Sass, a diferencia de CSS, se describen mediante ejemplos a continuación, con la finalidad de sacar el máximo provecho a esta herramienta (los ejemplos son tomados de [aquí](https://sass-lang.com/guide)):
+
+#### Variables
+
+**SCSS**
+```
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+```
+
+**CSS resultante**
+```
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+```
+La gran ventaja de esto es poder guardar parámetros de diseño en variables, y si estos cambian en el futuro, se pueden modificar en una sola línea y no en cada línea que se usó.
+
+#### Anidamiento *(Nesting)*
+
+**SCSS**
+```
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+```
+
+**CSS resultante**
+```
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+```
+Sass puede preservar la jerarquía de elementos en HTML mediante los selectores de CSS
+
+#### Modularización 
+
+Puedes escribir fragmentos parciales de Sass e incluirlos en otros archivos. Esta es una buena práctica para modularizar los estilos. Este tipo de archivos se deben nombrar iniciando con un guión bajo, por ejemplo `_base.scss` o `_variables.scss`. El guion bajo le permite saber a Sass que el archivo es parcial y que no debe ser procesado a CSS. Para importar el archivo se usa `rule`.
+
+**SCSS parcial**
+```
+// _base.scss
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+```
+
+**SCSS que importa parcial**
+```
+// styles.scss
+@use 'base';
+
+.inverse {
+  background-color: base.$primary-color;
+  color: white;
+}
+
+```
+
+**CSS resultante**
+```
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+.inverse {
+  background-color: #333;
+  color: white;
+}
+```
+
+Modularizar los estilos hace que sean más fáciles de mantener.
+
+#### Mixins
+**SCSS**
+```
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+.box { @include transform(rotate(30deg)); }
+
+```
+
+**CSS resultante**
+```
+.box {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+```
+
+Permite escribir bloques de CSS y llamarlos como si fuera una función pasándo un parámetro.
+
+#### Extend / herencia
+**SCSS**
+```
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}
+
+```
+
+**CSS resultante**
+```
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+
+```
+
+Permite escribir bloques propiedades de css y extenderlos a otros selectores
+
+#### Operadores
+**SCSS**
+```
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
+
+
+```
+
+**CSS resultante**
+```
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 62.5%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 31.25%;
+}
+
+```
+
+Sass permite realizar operaciones matemáticas con los operadores `+`, `-`, `*` y `/` sin necesidad de usar la función `calc()`  
+
+
+
+
 ### D3
 ### OpenLayers
 ### Simple statistics
