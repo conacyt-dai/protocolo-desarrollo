@@ -111,7 +111,9 @@ Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de 
 
 
 ### Geoserver
-<a href="https://geoserver.org"><div align="center"><img src="https://geoserver.org/img/geoserver-logo.png" /></div></a>
+[![Geoserver](https://geoserver.org/img/geoserver-logo.png "Geoserver")][geoserver_page]
+
+[geoserver_page]: https://geoserver.org
 
 GeoServer es un servidor de código abierto para compartir datos geoespaciales. Diseñado para la interoperabilidad, publica datos de cualquier fuente de datos espaciales importante utilizando estándares abiertos.
 
