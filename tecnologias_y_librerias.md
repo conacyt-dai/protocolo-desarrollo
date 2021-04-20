@@ -111,7 +111,7 @@ Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de 
 
 
 ### Geoserver
-[![Geoserver](https://geoserver.org/img/geoserver-logo.png "Geoserver")][geoserver_page]
+[<div align="center"><img src="https://geoserver.org/img/geoserver-logo.png" /></div>](https://geoserver.org)
 
 [geoserver_page]: https://geoserver.org
 
@@ -166,19 +166,19 @@ GeoServer está empaquetado como un servlet independiente para usar con servidor
 6. Utilice el método de su aplicación contenedora para iniciar y detener aplicaciones web para ejecutar GeoServer.
 7. Para acceder a la [interfaz de administración web](https://docs.geoserver.org/stable/en/user/webadmin/index.html#web-admin), abra un navegador y navegue hasta `http://SERVER/geoserver`. Por ejemplo, con Tomcat ejecutándose en el puerto 8080 en localhost, la URL sería `http://localhost:8080/geoserver`.
 
-## Levantar imagen de geoserver con Docker
+#### Levantar imagen de geoserver con Docker
 
-## Crear origen de datos
+#### Crear origen de datos
 
-## Crear un espacio de trabajo
+#### Crear un espacio de trabajo
 
-## Publicar capas geográficas
+#### Publicar capas geográficas
 
-### Estilos SLD
+##### Estilos SLD
 
-## Consumo de capas geográficas
+#### Consumo de capas geográficas
 
-### Consultas CQL en datos geográficos
+##### Consultas CQL en datos geográficos
 
 
 ### Django
