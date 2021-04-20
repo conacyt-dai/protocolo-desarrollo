@@ -583,6 +583,11 @@ Una buena práctica para colocar los ejes graduados es el uso de márgenes que d
 
 ```
 
+Si deseas profundizar más en este tema, se hizo [este](https://github.com/jdanielgoh/taller-d3) repositorio para la DAI, el cual incluye ejemplos prácticos de lo que se ha visto hasta ahora y profundiza en otro tipo de funcionalidades de d3, como eventos y transiciones, responsividad y estilos elaborados, fuerzas y procesos creativos.
+
+Los ejemplos que aquí se han abordado están basados en [este tutoria](https://observablehq.com/@uvizlab/d3-tutorial-2-introduction-to-d3-with-observable?collection=@uvizlab/d3-tutorial) y se recomienda [este](https://observablehq.com/@d3/learn-d3-by-example?collection=@d3/learn-d3) otro que es más avanzado. Cabe mencionar que observabe es una especie de notebooks para crear visualizaciones de datos y la estructura puede parecer a veces un poco distinta la la de un script de js, por lo cual hay que leer los ejemplos con cuidado.
+
+
 
 
 
@@ -595,6 +600,31 @@ Una buena práctica para colocar los ejes graduados es el uso de márgenes que d
 
 ### OpenLayers
 ### Simple statistics
+
+[Simple statistics](https://simplestatistics.org/) es una librería de JavaScript para implementar métodos estadísticos. En la DAI se ha usado para implementar el método de clasificación con cortes naturales (jenks) para algunos mapas, ya que hay veces en que los cuantiles dan resultados no deseados.
+
+Suponiento que tienes un Array `data` de valores numéricos a clasificar en `n` cantidad de grupos, con la función `ss.jenks(data,n)` esto es posible y te devuelve los cortes naturales.
+
+Con ayuda de d3 se podría crear una escala de la siguiente manera:
+
+```
+let colores=["#000","#ab324d","#e2e2e2","#fff"]
+let clases = ss.jenks(data,colores.length) //En este caso devuelve un array de 5 elementos
+let clases_to_d3= [...clases] //Creamos una copia porque es posible que el array original se use después para nomenclatura
+
+clases_to_d3.shift() //Borramos el primer elemento
+
+let scale = d3.scaleThreshold()
+    .domain(clases_to_d3)
+    .range(colores)
+```
+Si hay alguna duda sobre como funciona scaleThreshold() se recomienda consultar la [documentación](https://github.com/d3/d3-scale/blob/master/README.md#threshold-scales).
+
+A pesar de que Simple statistics es una vasta librería, hasta ahora en la DAI, este es e único uso que se le ha dado. No obstante, es bueno revisarla y saber de su existencia por si en un futuro se requiere implementar otros métodos estadísticos. 
+
+
+
+
 ### Jekill*
 ### Amcharts*
 ### Bulma*
