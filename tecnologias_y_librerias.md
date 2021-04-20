@@ -111,19 +111,18 @@ Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de 
 
 
 ### Geoserver
-
-<div align="center"><a href="https://geoserver.org"><img src="https://geoserver.org/img/geoserver-logo.png" /></a></div>
+[![geoserver logo](https://geoserver.org/img/geoserver-logo.png)](https://geoserver.org)
 
 GeoServer es un servidor de código abierto para compartir datos geoespaciales. Diseñado para la interoperabilidad, publica datos de cualquier fuente de datos espaciales importante utilizando estándares abiertos.
 
-GeoServer implementa protocolos OGC estándar de la industria, como Web Feature Service (WFS), Web Map Service (WMS) y Web Coverage Service (WCS). Hay formatos y opciones de publicación adicionales disponibles como extensiones, incluido el Servicio de procesamiento web (WPS) y el Servicio de mosaicos de mapas web (WMTS).
+    GeoServer implementa protocolos OGC estándar de la industria, como Web Feature Service (WFS), Web Map Service (WMS) y Web Coverage Service (WCS). Hay formatos y opciones de publicación adicionales disponibles como extensiones, incluido el Servicio de procesamiento web (WPS) y el Servicio de mosaicos de mapas web (WMTS).
 
 #### Instalación
 Para instalar en Linux con un servidor de aplicaciones existente como Tomcat, consulte la sección de archivo web.
 
 GeoServer requiere un entorno Java 8 o Java 11, disponible en [OpenJDK](http://openjdk.java.net/), [AdoptOpenJDK](https://adoptopenjdk.net/) o proporcionado por la distribución de su sistema operativo.
 
-[^Nota]: Para obtener más información sobre Java y GeoServer, consulte la sección sobre [Consideraciones de Java](https://docs.geoserver.org/stable/en/user/production/java.html#production-java).
+**Nota:** _Para obtener más información sobre Java y GeoServer, consulte la sección sobre [Consideraciones de Java](https://docs.geoserver.org/stable/en/user/production/java.html#production-java)._
 
 ##### Linux binary
 El binario independiente de la plataforma es una aplicación web GeoServer incluida dentro de Jetty, un servidor de aplicaciones portátil y ligero. Tiene las ventajas de funcionar de manera muy similar en todos los sistemas operativos y es muy simple de configurar.
@@ -161,8 +160,7 @@ GeoServer está empaquetado como un servlet independiente para usar con servidor
 2. Navegue a la [página de descarga de GeoServer](http://geoserver.org/download/).
 3. Seleccione Archivo web en la página de descarga.
 4. Descarga y descomprime el archivo.
-5. Implemente el archivo web como lo haría normalmente. A menudo, todo lo que se necesita es copiar el archivo geoserver.war al directorio de aplicaciones web del servidor de aplicaciones y la aplicación se implementará.
-[^Nota]: Es posible que sea necesario reiniciar su servidor de aplicaciones.
+5. Implemente el archivo web como lo haría normalmente. A menudo, todo lo que se necesita es copiar el archivo geoserver.war al directorio de aplicaciones web del servidor de aplicaciones y la aplicación se implementará (Es posible que sea necesario reiniciar su servidor de aplicaciones).
 6. Utilice el método de su aplicación contenedora para iniciar y detener aplicaciones web para ejecutar GeoServer.
 7. Para acceder a la [interfaz de administración web](https://docs.geoserver.org/stable/en/user/webadmin/index.html#web-admin), abra un navegador y navegue hasta `http://SERVER/geoserver`. Por ejemplo, con Tomcat ejecutándose en el puerto 8080 en localhost, la URL sería `http://localhost:8080/geoserver`.
 
