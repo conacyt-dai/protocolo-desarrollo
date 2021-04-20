@@ -188,7 +188,7 @@ GeoServer está empaquetado como un servlet independiente para usar con servidor
 ### Vue
 
 ### Sass
-Sass (*Syntactically Awesome Stylesheets*) es un metalenguaje de CSS. Permite usar funcionalidades que no existen en CSS, pero todas las funcionalidades de CSS funcionan también en Sass. Esisten dos tipos de formatos que Sass interpreta: `.scss` y `.sass`. La diferencia radica en la sintaxis y [aquí](https://sass-lang.com/documentation/syntax) puedes compararlos. En la DAI se suele usar el formato `.scss`.
+[Sass](https://sass-lang.com/) (*Syntactically Awesome Stylesheets*) es un metalenguaje de CSS. Permite usar funcionalidades que no existen en CSS, pero todas las funcionalidades de CSS funcionan también en Sass. Esisten dos tipos de formatos que Sass interpreta: `.scss` y `.sass`. La diferencia radica en la sintaxis y [aquí](https://sass-lang.com/documentation/syntax) puedes compararlos. En la DAI se suele usar el formato `.scss`.
 
 Algunas de las funcionalidades básicas que se pueden implementar en Sass, a diferencia de CSS, se describen mediante ejemplos a continuación con la finalidad de sacar el máximo provecho a esta herramienta (los ejemplos son tomados de [aquí](https://sass-lang.com/guide)):
 
@@ -431,8 +431,6 @@ Sass permite realizar operaciones matemáticas con los operadores `+`, `-`, `*` 
 Data-Driven-Documents [D3](https://d3js.org/) es conocida como una de las librerías de JavaScript más poderosas para visualizar datos, cuenta con una amplia [documentación](https://github.com/d3/d3/wiki) y su uso radica en ligara bases de datos a elementos de HTML, principalmente de SVG; de tal forma que, datos numéricos, temporales o categoricos se asocien a estilos y atributos de los elementos HTML o SVG. De esta forma se logra la transducción de una base de datos a una visualización web. Al mes de abril de 2021, en la DAI se usa la versión 6 de D3.
 
 #### Introducción a D3.js
-[fuente 1](https://observablehq.com/@d3/learn-d3-by-example?collection=@d3/learn-d3)
-[fuente 2 ](https://observablehq.com/@uvizlab/d3-tutorial-2-introduction-to-d3-with-observable?collection=@uvizlab/d3-tutorial)
 
 El entorno SVG (*Scalable Vector Graphics*) nos permite dibujar una amplia variedad de gráficos como puntos, rectángulos, curvas, polígonos, etc. Este tipo de gráficos se ajusta a diferentes tamaños de pantalla y la resolución no se pixelea.
 
@@ -583,6 +581,11 @@ Una buena práctica para colocar los ejes graduados es el uso de márgenes que d
 
 ```
 
+Si deseas profundizar más en este tema, se hizo [este](https://github.com/jdanielgoh/taller-d3) repositorio para la DAI, el cual incluye ejemplos prácticos de lo que se ha visto hasta ahora y profundiza en otro tipo de funcionalidades de d3, como eventos y transiciones, responsividad y estilos elaborados, fuerzas y procesos creativos.
+
+Los ejemplos que aquí se han abordado están basados en [este tutoria](https://observablehq.com/@uvizlab/d3-tutorial-2-introduction-to-d3-with-observable?collection=@uvizlab/d3-tutorial) y se recomienda [este](https://observablehq.com/@d3/learn-d3-by-example?collection=@d3/learn-d3) otro que es más avanzado. Cabe mencionar que observabe es una especie de notebooks para crear visualizaciones de datos y la estructura puede parecer a veces un poco distinta la la de un script de js, por lo cual hay que leer los ejemplos con cuidado.
+
+
 
 
 
@@ -595,6 +598,31 @@ Una buena práctica para colocar los ejes graduados es el uso de márgenes que d
 
 ### OpenLayers
 ### Simple statistics
+
+[Simple statistics](https://simplestatistics.org/) es una librería de JavaScript para implementar métodos estadísticos. En la DAI se ha usado para implementar el método de clasificación con cortes naturales (jenks) para algunos mapas, ya que hay veces en que los cuantiles dan resultados no deseados.
+
+Suponiento que tienes un Array `data` de valores numéricos a clasificar en `n` cantidad de grupos, con la función `ss.jenks(data,n)` esto es posible y te devuelve los cortes naturales.
+
+Con ayuda de d3 se podría crear una escala de la siguiente manera:
+
+```
+let colores=["#000","#ab324d","#e2e2e2","#fff"]
+let clases = ss.jenks(data,colores.length) //En este caso devuelve un array de 5 elementos
+let clases_to_d3= [...clases] //Creamos una copia porque es posible que el array original se use después para nomenclatura
+
+clases_to_d3.shift() //Borramos el primer elemento
+
+let scale = d3.scaleThreshold()
+    .domain(clases_to_d3)
+    .range(colores)
+```
+Si hay alguna duda sobre como funciona `scaleThreshold()` se recomienda consultar la [documentación](https://github.com/d3/d3-scale/blob/master/README.md#threshold-scales), en resumen mapea números, según el intervalo o rango en el que se encuentren, a valores discretos.
+
+A pesar de que Simple statistics es una vasta librería, hasta ahora en la DAI, este es e único uso que se le ha dado. No obstante, es bueno revisarla y saber de su existencia por si en un futuro se requiere implementar otros métodos estadísticos. 
+
+
+
+
 ### Jekill*
 ### Amcharts*
 ### Bulma*
