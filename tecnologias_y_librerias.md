@@ -400,7 +400,7 @@ d3.select("svg#visualizacion")
     .selectAll(elementos del DOM)
     .data(Array de datos)
     .enter()
-    .append(elementos, generalmente)
+    .append(elementos DOM)
     // Los siguientes parámetros son para declarar estilos y atributos
     //y pueden ir tantos como sean necesarios
     .attr(atributo,valor)
@@ -427,11 +427,11 @@ d3.select("svg#visualizacion")
 
 `.style()` toma dos argumentos de tipo string, el primero corresponde al estilo y el segundo al valor. Un ejemplo es `.style("fill","white")`
 
-**Ejes y escalas**
+**Escalas**
 
 Supón que tienes una base de datos, cuyos valores a visualizar con un diagrama de dispersión van de 0 a 5,000,000 para el eje horizontal y de 400 a 1,000 para el eje vertical, mientras que el tamaño del svg es de 800px X 800px. En este caso sería deseable tener una función de parametrización que asigne 0px al valor mínimo de las variables y 800px al máximo en el caso de la variable horizontal y 0px para 5,000,000 y 800px para 0 en el caso del eje vertical, ya que el origen en el svg se encuentra en la esquina superior izquierda, a diferencia de como ocurre en un plano cartesiano convencional. Para esto existen las funciones de escala de d3. Las más comunes son:
 
-* d3.scaleLinear(): Ideal para el caso planteado anteriormente, toma dominio (entrada) y rango (salida)
+* `d3.scaleLinear()`: Ideal para el caso planteado anteriormente, toma dominio (entrada) y rango (salida)
     ```
     //Mapea 0 a 800 y 5000000 a 0
     var escalaY=d3.scaleLinear()
@@ -442,7 +442,7 @@ Supón que tienes una base de datos, cuyos valores a visualizar con un diagrama 
     // 400    
     ```
 
-* d3.scaleBand(): Mapea un domino discreto a uno continuo. Es decir, el rango lo divide en el número de elementos del domino y asigna esos porcentajes 
+* `d3.scaleBand()`: Mapea un domino discreto a uno continuo. Es decir, el rango lo divide en el número de elementos del domino y asigna esos intervalos. Esta función es muy útil para gráficas de barras  
 
     ```
     var escalaX=d3.scaleBand()
@@ -460,7 +460,7 @@ Supón que tienes una base de datos, cuyos valores a visualizar con un diagrama 
     ```
 
 
-* d3.scaleTime(): Mapea de forma lineal datos temporales a numéricos. Para transformar datos de fecha en formato de texto la función `d3.timeParse` puede ser de utilidad:
+* `d3.scaleTime()`: Mapea de forma lineal datos temporales a numéricos. Para transformar fechas en formato de texto a formato temporal, la función `d3.timeParse()` puede ser de utilidad:
 
     ```
     var parseDate = d3.timeParse("%Y-%m-%d");
@@ -472,7 +472,7 @@ Supón que tienes una base de datos, cuyos valores a visualizar con un diagrama 
 
     ```
 
-* d3.scaleOrdinal():  mapea datos discretos a datos discretos. Su función recuerda a la de un diccionario
+* `d3.scaleOrdinal()`:  mapea datos discretos a datos discretos. Su función recuerda a la de un diccionario
     ```
     var escalaX=d3.scaleOrdinal()
         .domain(["Gato","Perro","Vaca"])
@@ -481,6 +481,38 @@ Supón que tienes una base de datos, cuyos valores a visualizar con un diagrama 
     // #fff
 
     ```
+
+**Ejes**
+
+Una buena práctica para colocar los ejes graduados es el uso de márgenes que dejen un espacio alrededor de la visualización, en donde se puedan colocar los ejes sin que estos se empalmen con los elementos de la visualización o queden fuera y no visibles de ésta. Colocar ejes graduados puede ser muy sencillo si ya se han definido las escalas previamente, como se muestra en el siguiente código:
+
+```
+    const margin = { left: 30, top: 10, right: 10, bottom: 10 } 
+
+    const ancho= 400-margin.left-margin.right, alto = 300-margin.top-margin.bottom;
+    const svg = d3.select("div#contenedorVisualizacion")
+        .attr("width",ancho+margin.left+margin.right)
+        .attr("height",alto+margin.top+margin.bottom)
+        .append("g")
+        .attr("transform",`translate(${margin.left},${margin.top})`)
+
+        //Definiendo svg de dimensiones de 400pxX300px, se le agrega un grupo "g" y se traslada al margen derecho y superior
+
+    
+    const escalaX = d3.scaleLinear()
+        .domain([0, 50])  
+        .range([0, ancho])
+    const escalaY = d3.scaleLinear()
+        .domain([0, 100])  
+        .range([alto,0])
+    
+    svg.append('g').call(d3.axisBottom(escalaX))
+        .attr('transform', `translate(0,${alto})`)  // Agrega eje graduado y lo posiciona abajo, con una separación de margin.bottom de la orilla inferior del svg
+    
+    svg.append('g').call(d3.axisLeft(escalaY))
+        // Agrega eje graduado 
+
+```
 
 
 
