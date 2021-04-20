@@ -188,7 +188,7 @@ GeoServer está empaquetado como un servlet independiente para usar con servidor
 ### Vue
 
 ### Sass
-Sass (*Syntactically Awesome Stylesheets*) es un metalenguaje de CSS. Permite usar funcionalidades que no existen en CSS, pero todas las funcionalidades de CSS funcionan también en Sass. Esisten dos tipos de formatos que Sass interpreta: `.scss` y `.sass`. La diferencia radica en la sintaxis y [aquí](https://sass-lang.com/documentation/syntax) puedes compararlos. En la DAI se suele usar el formato `.scss`.
+[Sass](https://sass-lang.com/) (*Syntactically Awesome Stylesheets*) es un metalenguaje de CSS. Permite usar funcionalidades que no existen en CSS, pero todas las funcionalidades de CSS funcionan también en Sass. Esisten dos tipos de formatos que Sass interpreta: `.scss` y `.sass`. La diferencia radica en la sintaxis y [aquí](https://sass-lang.com/documentation/syntax) puedes compararlos. En la DAI se suele usar el formato `.scss`.
 
 Algunas de las funcionalidades básicas que se pueden implementar en Sass, a diferencia de CSS, se describen mediante ejemplos a continuación con la finalidad de sacar el máximo provecho a esta herramienta (los ejemplos son tomados de [aquí](https://sass-lang.com/guide)):
 
@@ -431,8 +431,6 @@ Sass permite realizar operaciones matemáticas con los operadores `+`, `-`, `*` 
 Data-Driven-Documents [D3](https://d3js.org/) es conocida como una de las librerías de JavaScript más poderosas para visualizar datos, cuenta con una amplia [documentación](https://github.com/d3/d3/wiki) y su uso radica en ligara bases de datos a elementos de HTML, principalmente de SVG; de tal forma que, datos numéricos, temporales o categoricos se asocien a estilos y atributos de los elementos HTML o SVG. De esta forma se logra la transducción de una base de datos a una visualización web. Al mes de abril de 2021, en la DAI se usa la versión 6 de D3.
 
 #### Introducción a D3.js
-[fuente 1](https://observablehq.com/@d3/learn-d3-by-example?collection=@d3/learn-d3)
-[fuente 2 ](https://observablehq.com/@uvizlab/d3-tutorial-2-introduction-to-d3-with-observable?collection=@uvizlab/d3-tutorial)
 
 El entorno SVG (*Scalable Vector Graphics*) nos permite dibujar una amplia variedad de gráficos como puntos, rectángulos, curvas, polígonos, etc. Este tipo de gráficos se ajusta a diferentes tamaños de pantalla y la resolución no se pixelea.
 
@@ -618,7 +616,7 @@ let scale = d3.scaleThreshold()
     .domain(clases_to_d3)
     .range(colores)
 ```
-Si hay alguna duda sobre como funciona scaleThreshold() se recomienda consultar la [documentación](https://github.com/d3/d3-scale/blob/master/README.md#threshold-scales).
+Si hay alguna duda sobre como funciona `scaleThreshold()` se recomienda consultar la [documentación](https://github.com/d3/d3-scale/blob/master/README.md#threshold-scales), en resumen mapea números, según el intervalo o rango en el que se encuentren, a valores discretos.
 
 A pesar de que Simple statistics es una vasta librería, hasta ahora en la DAI, este es e único uso que se le ha dado. No obstante, es bueno revisarla y saber de su existencia por si en un futuro se requiere implementar otros métodos estadísticos. 
 
