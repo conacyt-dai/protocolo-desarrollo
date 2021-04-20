@@ -112,6 +112,29 @@ Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de 
 
 ### Geoserver
 
+<div align="center"><a href="https://geoserver.org"><img src="https://geoserver.org/img/geoserver-logo.png" /></a></div>
+
+GeoServer es un servidor de código abierto para compartir datos geoespaciales. Diseñado para la interoperabilidad, publica datos de cualquier fuente de datos espaciales importante utilizando estándares abiertos.
+
+GeoServer implementa protocolos OGC estándar de la industria, como Web Feature Service (WFS), Web Map Service (WMS) y Web Coverage Service (WCS). Hay formatos y opciones de publicación adicionales disponibles como extensiones, incluido el Servicio de procesamiento web (WPS) y el Servicio de mosaicos de mapas web (WMTS).
+
+## Instalación
+
+## Levantar imagen de geoserver con Docker
+
+## Crear origen de datos
+
+## Crear un espacio de trabajo
+
+## Publicar capas geográficas
+
+### Estilos SLD
+
+## Consumo de capas geográficas
+
+### Consultas CQL en datos geográficos
+
+
 ### Django
 
 
