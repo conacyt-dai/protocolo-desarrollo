@@ -111,11 +111,11 @@ Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de 
 
 
 ### Geoserver
-[![geoserver logo](https://geoserver.org/img/geoserver-logo.png)](https://geoserver.org)
+<a href="https://geoserver.org"><div align="center"><img src="https://geoserver.org/img/geoserver-logo.png" /></div></a>
 
 GeoServer es un servidor de código abierto para compartir datos geoespaciales. Diseñado para la interoperabilidad, publica datos de cualquier fuente de datos espaciales importante utilizando estándares abiertos.
 
-    GeoServer implementa protocolos OGC estándar de la industria, como Web Feature Service (WFS), Web Map Service (WMS) y Web Coverage Service (WCS). Hay formatos y opciones de publicación adicionales disponibles como extensiones, incluido el Servicio de procesamiento web (WPS) y el Servicio de mosaicos de mapas web (WMTS).
+GeoServer implementa protocolos OGC estándar de la industria, como Web Feature Service (WFS), Web Map Service (WMS) y Web Coverage Service (WCS). Hay formatos y opciones de publicación adicionales disponibles como extensiones, incluido el Servicio de procesamiento web (WPS) y el Servicio de mosaicos de mapas web (WMTS).
 
 #### Instalación
 Para instalar en Linux con un servidor de aplicaciones existente como Tomcat, consulte la sección de archivo web.
