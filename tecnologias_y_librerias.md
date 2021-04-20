@@ -111,6 +111,7 @@ Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de 
 
 
 ### Geoserver
+
 [<div align="center"><img src="https://geoserver.org/img/geoserver-logo.png" /></div>](https://geoserver.org)
 
 [geoserver_page]: https://geoserver.org
@@ -120,7 +121,7 @@ GeoServer es un servidor de código abierto para compartir datos geoespaciales. 
 GeoServer implementa protocolos OGC estándar de la industria, como Web Feature Service (WFS), Web Map Service (WMS) y Web Coverage Service (WCS). Hay formatos y opciones de publicación adicionales disponibles como extensiones, incluido el Servicio de procesamiento web (WPS) y el Servicio de mosaicos de mapas web (WMTS).
 
 #### Instalación
-Para instalar en Linux con un servidor de aplicaciones existente como Tomcat, consulte la sección de archivo web.
+Para instalar con un servidor de aplicaciones existente como Tomcat, consulte la sección de archivo web.
 
 GeoServer requiere un entorno Java 8 o Java 11, disponible en [OpenJDK](http://openjdk.java.net/), [AdoptOpenJDK](https://adoptopenjdk.net/) o proporcionado por la distribución de su sistema operativo.
 
@@ -168,9 +169,55 @@ GeoServer está empaquetado como un servlet independiente para usar con servidor
 
 #### Levantar imagen de geoserver con Docker
 
-#### Crear origen de datos
 
 #### Crear un espacio de trabajo
+Un espacio de trabajo es un contenedor que se utiliza para agrupar capas similares.
+
+__Nota:__ _Este paso es opcional si desea utilizar un espacio de trabajo existente. Por lo general, se crea un espacio de trabajo para cada proyecto, que puede incluir tiendas y capas que están relacionadas entre sí._
+
+1. En un navegador web, vaya a `http://SERVER/geoserver`.
+2. Inicie sesión en GeoServer como se describe en la sección [Iniciar sesión](https://docs.geoserver.org/stable/en/user/gettingstarted/web-admin-quickstart/index.html#logging-in).
+3. Vaya a __Data__ ‣ __Workspaces__.
+<div align="center"><img src="https://docs.geoserver.org/stable/en/user/_images/data_workspaces1.png" /></div>
+
+4. Haga clic en el botón Agregar nuevo espacio de trabajo.
+5. Se le pedirá que ingrese un nombre de espacio de trabajo y un URI de espacio de nombres.
+<div align="center"><img src="https://docs.geoserver.org/stable/en/user/_images/new_workspace.png" /></div>
+
+6. Ingrese el __Nombre__ como `workspace` y el __URI__ del espacio de nombres como `http://geoserver.org/workspace`.
+__Nota:__ _El nombre de un espacio de trabajo es un identificador que describe su proyecto. No debe exceder los diez caracteres ni contener espacios. Un URI de espacio de nombres (Identificador uniforme de recursos) generalmente puede ser una URL asociada con su proyecto con un identificador final agregado que indica el espacio de trabajo. El URI del espacio de nombres archivado no necesita resolverse en una dirección web válida real._
+7. Haga clic en el botón __Enviar__. El espacio de trabajo de `workspace` se agregará a la lista de espacios de trabajo.
+
+#### Crear un almacén de datos
+Una vez que se crea el espacio de trabajo, estamos listos para agregar un nuevo almacén de datos. Los almacenes de datos le dice a GeoServer cómo conectarse al archivo geográfico.
+1. Vaya a __Data__ ‣ __Stores__.
+2. Debería ver una lista de almacenes de datos, incluido el tipo de almacén y el espacio de trabajo al que pertenece.
+3. Haga clic en el botón `Add new Store`. Se le redirigirá a una lista de las fuentes de datos compatibles con GeoServer. _Tenga en cuenta que las fuentes de datos son extensibles, por lo que su lista puede verse ligeramente diferente._
+<div align="center"><img src="https://docs.geoserver.org/stable/en/user/_images/datastores.png" /></div>
+
+4. Elegir origen de datos vectoriales
+    * PostGIS Database
+        - Haga clic en __PostGIS__.
+        - Ingrese la información básica del almacén (Workspace, Data Source Name, Description).
+        - Especifique los parámetros de __conexión__ de la base de datos PostGIS:
+            | Option | Value |
+            | ------ | ----- |
+            | dbtype | `postgis` |
+            | host | (`db host`) |
+            | port | (`db port`) |
+            | database | (`db name`) |
+            | schema | (`db schema`) |
+            | user | (`postgres user`) |
+            | passwd | (Password for the `postgres` user) |
+            | validate connections | (Checked) |
+    * ESRI(tm) Shapefiles (*.shp)
+        - Haga clic en __Shapefile__. Aparecerá la página Nueva fuente de datos vectoriales.
+        - Comience configurando la información básica del almacén.
+            + Seleccione un espacio de trabajo en el menú desplegable.
+            + Ingrese el nombre de la fuente de datos.
+            + Ingrese una descripción breve.
+        - En Parámetros de conexión, busque la URL de ubicación del shapefile.
+6. Clic en __Guardar__.
 
 #### Publicar capas geográficas
 
