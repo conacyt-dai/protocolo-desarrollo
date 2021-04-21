@@ -1,1 +1,3 @@
 # Requerimientos mínimos de documentación de proyectos
+
+Todos los proyectos de desarrollo deberán contar con un archivo README.md que contendrá la descripción del proyecto, las tecnologías requeridas para correrlo localmente, las instrucciones de instalación y las instrucciones para correr el proyecto localmente y para producción. La intención de este archivo es que cualquier persona nueva que se integre al proyecto tenga la claridad necesaria para comenzar a explorar el proyecto y trabajar en él.
