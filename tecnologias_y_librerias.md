@@ -111,9 +111,7 @@ Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de 
 
 
 ### Geoserver
-<div align="center"><img src="https://geoserver.org/img/geoserver-logo.png" /></div>
-
-[geoserver_page]: https://geoserver.org
+[<div align="center"><img src="https://docs.geoserver.org/stable/en/user/_static/chrome/geoserver-logo.png" /></div>](https://geoserver.org)
 
 GeoServer es un servidor de código abierto para compartir datos geoespaciales. Diseñado para la interoperabilidad, publica datos de cualquier fuente de datos espaciales importante utilizando estándares abiertos.
 
@@ -198,16 +196,16 @@ Una vez que se crea el espacio de trabajo, estamos listos para agregar un nuevo 
 4. Haga clic en __PostGIS__.
 5. Ingrese la información básica del almacén (Workspace, Data Source Name, Description).
 6. Especifique los parámetros de __conexión__ de la base de datos PostGIS:
-  | Option | Value |
-  | ------ | ----- |
-  | dbtype | `postgis` |
-  | host | (`db host`) |
-  | port | (`db port`) |
-  | database | (`db name`) |
-  | schema | (`db schema`) |
-  | user | (`postgres user`) |
-  | passwd | (Password for the `postgres` user) |
-  | validate connections | (Checked) |
+| Option | Value |
+| ------ | ----- |
+| dbtype | `postgis` |
+| host | (`db host`) |
+| port | (`db port`) |
+| database | (`db name`) |
+| schema | (`db schema`) |
+| user | (`postgres user`) |
+| passwd | (Password for the `postgres` user) |
+| validate connections | (Checked) |
 7. Clic en __Guardar__.
 
 #### Publicar capas geográficas
