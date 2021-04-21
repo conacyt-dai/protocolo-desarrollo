@@ -249,16 +249,16 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+    font: 100% $font-stack;
+    color: $primary-color;
 }
 ```
 
 **CSS resultante**
 ```
 body {
-  font: 100% Helvetica, sans-serif;
-  color: #333;
+    font: 100% Helvetica, sans-serif;
+    color: #333;
 }
 ```
 La gran ventaja de esto es poder guardar parámetros de diseño en variables, y si estos cambian en el futuro, se pueden modificar en una sola línea y no en cada línea que se usó.
@@ -268,19 +268,19 @@ La gran ventaja de esto es poder guardar parámetros de diseño en variables, y 
 **SCSS**
 ```
 nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 
-  li { display: inline-block; }
+    li { display: inline-block; }
 
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-  }
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
 }
 
 ```
@@ -288,17 +288,17 @@ nav {
 **CSS resultante**
 ```
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 nav li {
-  display: inline-block;
+    display: inline-block;
 }
 nav a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none;
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
 }
 ```
 Sass puede preservar la jerarquía de elementos en HTML mediante los selectores de CSS
@@ -314,8 +314,8 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+    font: 100% $font-stack;
+    color: $primary-color;
 }
 
 ```
@@ -326,8 +326,8 @@ body {
 @use 'base';
 
 .inverse {
-  background-color: base.$primary-color;
-  color: white;
+    background-color: base.$primary-color;
+    color: white;
 }
 
 ```
@@ -335,13 +335,13 @@ body {
 **CSS resultante**
 ```
 body {
-  font: 100% Helvetica, sans-serif;
-  color: #333;
+    font: 100% Helvetica, sans-serif;
+    color: #333;
 }
 
 .inverse {
-  background-color: #333;
-  color: white;
+    background-color: #333;
+    color: white;
 }
 ```
 
@@ -351,9 +351,9 @@ Modularizar los estilos hace que sean más fáciles de mantener.
 **SCSS**
 ```
 @mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
 }
 .box { @include transform(rotate(30deg)); }
 
@@ -362,9 +362,9 @@ Modularizar los estilos hace que sean más fáciles de mantener.
 **CSS resultante**
 ```
 .box {
-  -webkit-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
 }
 
 ```
@@ -376,34 +376,34 @@ Permite escribir bloques de CSS y llamarlos como si fuera una función pasándo 
 ```
 /* This CSS will print because %message-shared is extended. */
 %message-shared {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
 }
 
 // This CSS won't print because %equal-heights is never extended.
 %equal-heights {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .message {
-  @extend %message-shared;
+    @extend %message-shared;
 }
 
 .success {
-  @extend %message-shared;
-  border-color: green;
+    @extend %message-shared;
+    border-color: green;
 }
 
 .error {
-  @extend %message-shared;
-  border-color: red;
+    @extend %message-shared;
+    border-color: red;
 }
 
 .warning {
-  @extend %message-shared;
-  border-color: yellow;
+    @extend %message-shared;
+    border-color: yellow;
 }
 
 ```
@@ -411,21 +411,21 @@ Permite escribir bloques de CSS y llamarlos como si fuera una función pasándo 
 **CSS resultante**
 ```
 .message, .success, .error, .warning {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
 }
 
 .success {
-  border-color: green;
+    border-color: green;
 }
 
 .error {
-  border-color: red;
+    border-color: red;
 }
 
 .warning {
-  border-color: yellow;
+    border-color: yellow;
 }
 
 ```
@@ -436,17 +436,17 @@ Permite escribir bloques propiedades de css y extenderlos a otros selectores
 **SCSS**
 ```
 .container {
-  width: 100%;
+    width: 100%;
 }
 
 article[role="main"] {
-  float: left;
-  width: 600px / 960px * 100%;
+    float: left;
+    width: 600px / 960px * 100%;
 }
 
 aside[role="complementary"] {
-  float: right;
-  width: 300px / 960px * 100%;
+    float: right;
+    width: 300px / 960px * 100%;
 }
 
 
@@ -455,17 +455,17 @@ aside[role="complementary"] {
 **CSS resultante**
 ```
 .container {
-  width: 100%;
+    width: 100%;
 }
 
 article[role="main"] {
-  float: left;
-  width: 62.5%;
+    float: left;
+    width: 62.5%;
 }
 
 aside[role="complementary"] {
-  float: right;
-  width: 31.25%;
+    float: right;
+    width: 31.25%;
 }
 
 ```
@@ -603,30 +603,30 @@ Supón que tienes una base de datos, cuyos valores a visualizar con un diagrama 
 Una buena práctica para colocar los ejes graduados es el uso de márgenes que dejen un espacio alrededor de la visualización, en donde se puedan colocar los ejes sin que estos se empalmen con los elementos de la visualización o queden fuera y no visibles de ésta. Colocar ejes graduados puede ser muy sencillo si ya se han definido las escalas previamente, como se muestra en el siguiente código:
 
 ```
-    const margin = { left: 30, top: 10, right: 10, bottom: 10 } 
+const margin = { left: 30, top: 10, right: 10, bottom: 10 } 
 
-    const ancho= 400-margin.left-margin.right, alto = 300-margin.top-margin.bottom;
-    const svg = d3.select("div#contenedorVisualizacion")
-        .attr("width",ancho+margin.left+margin.right)
-        .attr("height",alto+margin.top+margin.bottom)
-        .append("g")
-        .attr("transform",`translate(${margin.left},${margin.top})`)
+const ancho= 400-margin.left-margin.right, alto = 300-margin.top-margin.bottom;
+const svg = d3.select("div#contenedorVisualizacion")
+    .attr("width",ancho+margin.left+margin.right)
+    .attr("height",alto+margin.top+margin.bottom)
+    .append("g")
+    .attr("transform",`translate(${margin.left},${margin.top})`)
 
-        //Definiendo svg de dimensiones de 400pxX300px, se le agrega un grupo "g" y se traslada al margen derecho y superior
+    //Definiendo svg de dimensiones de 400pxX300px, se le agrega un grupo "g" y se traslada al margen derecho y superior
 
-    
-    const escalaX = d3.scaleLinear()
-        .domain([0, 50])  
-        .range([0, ancho])
-    const escalaY = d3.scaleLinear()
-        .domain([0, 100])  
-        .range([alto,0])
-    
-    svg.append('g').call(d3.axisBottom(escalaX))
-        .attr('transform', `translate(0,${alto})`)  // Agrega eje graduado y lo posiciona abajo, con una separación de margin.bottom de la orilla inferior del svg
-    
-    svg.append('g').call(d3.axisLeft(escalaY))
-        // Agrega eje graduado 
+
+const escalaX = d3.scaleLinear()
+    .domain([0, 50])  
+    .range([0, ancho])
+const escalaY = d3.scaleLinear()
+    .domain([0, 100])  
+    .range([alto,0])
+
+svg.append('g').call(d3.axisBottom(escalaX))
+    .attr('transform', `translate(0,${alto})`)  // Agrega eje graduado y lo posiciona abajo, con una separación de margin.bottom de la orilla inferior del svg
+
+svg.append('g').call(d3.axisLeft(escalaY))
+    // Agrega eje graduado 
 
 ```
 
