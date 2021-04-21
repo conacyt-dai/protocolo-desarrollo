@@ -111,8 +111,7 @@ Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de 
 
 
 ### Geoserver
-
-[<div align="center"><img src="https://geoserver.org/img/geoserver-logo.png" /></div>](https://geoserver.org)
+<div align="center"><img src="https://geoserver.org/img/geoserver-logo.png" /></div>
 
 [geoserver_page]: https://geoserver.org
 
@@ -185,48 +184,53 @@ __Nota:__ _Este paso es opcional si desea utilizar un espacio de trabajo existen
 <div align="center"><img src="https://docs.geoserver.org/stable/en/user/_images/new_workspace.png" /></div>
 
 6. Ingrese el __Nombre__ como `workspace` y el __URI__ del espacio de nombres como `http://geoserver.org/workspace`.
+
 __Nota:__ _El nombre de un espacio de trabajo es un identificador que describe su proyecto. No debe exceder los diez caracteres ni contener espacios. Un URI de espacio de nombres (Identificador uniforme de recursos) generalmente puede ser una URL asociada con su proyecto con un identificador final agregado que indica el espacio de trabajo. El URI del espacio de nombres archivado no necesita resolverse en una dirección web válida real._
 7. Haga clic en el botón __Enviar__. El espacio de trabajo de `workspace` se agregará a la lista de espacios de trabajo.
 
-#### Crear un almacén de datos
+#### Crear un almacén de datos con origen de postgis
 Una vez que se crea el espacio de trabajo, estamos listos para agregar un nuevo almacén de datos. Los almacenes de datos le dice a GeoServer cómo conectarse al archivo geográfico.
 1. Vaya a __Data__ ‣ __Stores__.
 2. Debería ver una lista de almacenes de datos, incluido el tipo de almacén y el espacio de trabajo al que pertenece.
 3. Haga clic en el botón `Add new Store`. Se le redirigirá a una lista de las fuentes de datos compatibles con GeoServer. _Tenga en cuenta que las fuentes de datos son extensibles, por lo que su lista puede verse ligeramente diferente._
 <div align="center"><img src="https://docs.geoserver.org/stable/en/user/_images/datastores.png" /></div>
 
-4. Elegir origen de datos vectoriales
-    * PostGIS Database
-        - Haga clic en __PostGIS__.
-        - Ingrese la información básica del almacén (Workspace, Data Source Name, Description).
-        - Especifique los parámetros de __conexión__ de la base de datos PostGIS:
-            | Option | Value |
-            | ------ | ----- |
-            | dbtype | `postgis` |
-            | host | (`db host`) |
-            | port | (`db port`) |
-            | database | (`db name`) |
-            | schema | (`db schema`) |
-            | user | (`postgres user`) |
-            | passwd | (Password for the `postgres` user) |
-            | validate connections | (Checked) |
-    * ESRI(tm) Shapefiles (*.shp)
-        - Haga clic en __Shapefile__. Aparecerá la página Nueva fuente de datos vectoriales.
-        - Comience configurando la información básica del almacén.
-            + Seleccione un espacio de trabajo en el menú desplegable.
-            + Ingrese el nombre de la fuente de datos.
-            + Ingrese una descripción breve.
-        - En Parámetros de conexión, busque la URL de ubicación del shapefile.
-6. Clic en __Guardar__.
+4. Haga clic en __PostGIS__.
+5. Ingrese la información básica del almacén (Workspace, Data Source Name, Description).
+6. Especifique los parámetros de __conexión__ de la base de datos PostGIS:
+  | Option | Value |
+  | ------ | ----- |
+  | dbtype | `postgis` |
+  | host | (`db host`) |
+  | port | (`db port`) |
+  | database | (`db name`) |
+  | schema | (`db schema`) |
+  | user | (`postgres user`) |
+  | passwd | (Password for the `postgres` user) |
+  | validate connections | (Checked) |
+7. Clic en __Guardar__.
 
 #### Publicar capas geográficas
+Ahora que el almacén está preparado, podemos publicar la capa.
+1. Vaya a __Data__ ‣ __Layers__.
+2. Haga clic en __Add a new resource__.
+3. En el menú del selector Nueva capa, seleccione el almacén de datos.
+4. En la fila de la capa resultante, seleccione el nombre de la capa que desea publicar.
+5. La página Editar capa define los datos y los parámetros de publicación de una capa. Introduzca un título breve y un resumen para la capa.
+6. Genere los cuadros delimitadores de la capa haciendo clic en los enlaces Calcular a partir de datos y luego Calcular a partir de límites nativos.
+<div align="center"><img src="https://docs.geoserver.org/stable/en/user/_images/boundingbox.png" /></div>
 
-##### Estilos SLD
+7. Haga clic en la pestaña __Publicación__ en la parte superior de la página.
+8. Podemos establecer el estilo de la capa aquí. En Configuración de WMS, asegúrese de que el Estilo predeterminado esté configurado a la geometría correcta.
+<div align="center"><img src="https://docs.geoserver.org/stable/en/user/_images/style.png" /></div>
 
-#### Consumo de capas geográficas
+9. Finalice la configuración de la capa desplazándose hasta la parte inferior de la página y haciendo clic en __Guardar__.
 
-##### Consultas CQL en datos geográficos
-
+#### Vista previa de la capa
+Para verificar que la capa se publicó correctamente, podemos obtener una vista previa de la capa.
+1. Navegue a la pantalla Vista previa de la capa y busque su capa.
+2. Haga clic en el enlace __OpenLayers__ en la columna de formatos comunes.
+3. Un mapa de OpenLayers se cargará en una nueva pestaña y mostrará los datos del shapefile con el estilo predeterminado. Puede utilizar este mapa de vista previa para hacer zoom y desplazarse por el conjunto de datos, así como para mostrar los atributos de las entidades.
 
 ### Django
 
