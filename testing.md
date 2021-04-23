@@ -27,6 +27,7 @@ export default {
 </script>
 ```
 Test unitario para verificar si el texto en el componente se modifica como es de esperarse al dar un click 
+
 ```
 // tests/unit/contador.spec.js
 
