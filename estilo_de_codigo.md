@@ -3,7 +3,7 @@
 ## Convenciones de desarrollo en la DAI
 
 El equipo de desarrollo deberá leer e implementar las recomendaciones que se encuentran en la [guía de desarrollo](https://github.com/flkt-crnpio/dai-guia-de-buenas-practicas).
-Adoptaremos la convencion de escribir las variables con el estilo `snake_case` y las funciones de javascript con `camelCase`, Además, las variables de tipo boleano deberán tener el prefijo `is_`.
+Adoptaremos la convención de escribir las variables con el estilo `snake_case` y las funciones de javascript con `camelCase`, Además, las variables de tipo booleano deberán tener el prefijo `is_`.
 
 A continuación se exponen una serie de conceptos que deberán ser puestos en práctica por el equipo de desarrollo de la DAI.
 
@@ -13,7 +13,7 @@ A continuación se exponen una serie de conceptos que deberán ser puestos en pr
 
 ### DRY
 
-*Don't repeat yourself* es un principio de desarrollo de software que promueve la reducción de duplicación. Según este principio, ninguna piezas de información debe ser duplicada, pues esto dificula implementar cambios y la evolución misma del código. Con piezas de información nos podemos referir a:
+*Don't repeat yourself* es un principio de desarrollo de software que promueve la reducción de duplicación. Según este principio, ninguna piezas de información debe ser duplicada, pues esto dificulta implementar cambios y la evolución misma del código. Con piezas de información nos podemos referir a:
 - código
 - bases de datos
 - información textual o documentación 
@@ -45,16 +45,18 @@ Cada interface tendrá una  única responsabilidad, es preferible tener muchas i
 **Dependency Inversion Principle**
 
 Depender de abstracciones y no de implementaciones, establece que 
-* Los módulos de alto nivel no deberían depender de los de bajo nivel. Ambos deberan depender de abstracciones
+* Los módulos de alto nivel no deberían depender de los de bajo nivel. Ambos deberán depender de abstracciones
 
 * Las abstracciones no deberían depender de los detalles. Son los detalles los que deberían depender de las abstracciones.
 
 
 ## Código limpio
 
+A continuación se rescatan algunas recomendaciones de *Clean code*, de Uncle Bob 
+
 ### Nombres significativos
 
-Debemos utilizar nombres de variables y de funciones que revelen la intención o uso de ésta, de manerar clara, que sean pronunciables y fáciles de buscar. La única excepcion pueden ser variables que se usan en ciclos o mapeos de arrays. Las funciones preferentemente deberían contener un verbo
+Debemos utilizar nombres de variables y de funciones que revelen la intención o uso de ésta, de manera clara, que sean pronunciables y fáciles de buscar. La única excepción pueden ser variables que se usan en ciclos o mapeos de arrays. Las funciones preferentemente deberían contener un verbo
 
 ```
 //Mal
@@ -76,7 +78,7 @@ var fecha_de_inicio=111
 - Debe hacer una cosa y la debe hacer bien. En este punto puede haber una ambigüedad sobre qué es hacer bien una cosa; lo ideal es que una función descomponga un concepto más grande (como lo debería indicar el nombre de la función) en un conjunto de pasos en el siguiente nivel de abstracción.
 - Un nivel de abstracción por función
 
-- Evitar pasar un boleano como argumento. ESto significaría que tu función puede hacer más de una cosa y que podría estar usando varios niveles de abstracción 
+- Evitar pasar un booleano como argumento. ESto significaría que tu función puede hacer más de una cosa y que podría estar usando varios niveles de abstracción 
 
 - Si una función toma más de 3 argumentos, quizá lo mejor sea que tome objetos como argumento.
 
