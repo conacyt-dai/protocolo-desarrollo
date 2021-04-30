@@ -26,6 +26,7 @@ Al mes de abril de 2021 se usa la versión 14 de node en la DAI, esta es la vers
 Si no lo tienes instalado, puedes instalarlo mediante `nvm` (node version manager), considerado una de las mejores opciones para instalar node.
 
 1. Instalación de  `nvm`
+
     **Linux/MacOS**
 
     En la consola de tu equipo ejecutar el siguiente comando
@@ -106,6 +107,16 @@ npm install d3
 Por lo general, el proyecto tendrá una carpeta `src` que es en dónde se alojará el proyecto en desarrollo, incluyendo carpetas de `assets`, `js` y `css`. Por otra parte, se suele crear la carpeta `dist` en proyectos en donde se usan preprocesadores; el contenido de esta carpeta es el que iría a producción.
 
 Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de desarrollo que se explicará más adelante. El uso de esta herramienta nos ayudará a estructurar el proyecto.
+
+
+### Vue CLI
+Vue CLI es un sistema completo para el desarrollo rápido de Vue.js, que proporciona:
+
+* Soporte de proyectos interactivos a través de @vue/cli.
+* Creación rápida de prototipos de configuración cero a través de @vue/cli + @vue/cli-service-global.
+* Una interfaz gráfica de usuario completa para crear y administrar proyectos de Vue.js.
+
+Vue CLI tiene como objetivo ser la línea de base de herramientas estándar para el ecosistema Vue. Garantiza que las diversas herramientas de compilación funcionen sin problemas junto con valores predeterminados razonables para que pueda concentrarse en escribir su aplicación en lugar de pasar días luchando con configuraciones. Al mismo tiempo, todavía ofrece la flexibilidad de modificar la configuración de cada herramienta sin la necesidad de expulsarla.
 
 
 
@@ -195,16 +206,17 @@ Una vez que se crea el espacio de trabajo, estamos listos para agregar un nuevo 
 5. Ingrese la información básica del almacén (Workspace, Data Source Name, Description).
 6. Especifique los parámetros de __conexión__ de la base de datos PostGIS:
 
-| Option | Value |
-| ------ | ----- |
-| dbtype | `postgis` |
-| host | (`db host`) |
-| port | (`db port`) |
-| database | (`db name`) |
-| schema | (`db schema`) |
-| user | (`postgres user`) |
-| passwd | (Password for the `postgres` user) |
-| validate connections | (Checked) |
+    | Option | Value |
+    | ------ | ----- |
+    | dbtype | `postgis` |
+    | host | (`db host`) |
+    | port | (`db port`) |
+    | database | (`db name`) |
+    | schema | (`db schema`) |
+    | user | (`postgres user`) |
+    | passwd | (Password for the `postgres` user) |
+    | validate connections | (Checked) |
+
 7. Clic en __Guardar__.
 
 #### Publicar capas geográficas
@@ -233,7 +245,12 @@ Para verificar que la capa se publicó correctamente, podemos obtener una vista 
 
 
 ## Librerías 
-### Vue
+### Vue.js
+[Vue](https://vuejs.org/) es un framework progresivo para construir interfaces de usuario. A diferencia de otros frameworks monolíticos, Vue está diseñado desde cero para ser adoptable de forma incremental. La biblioteca principal se centra solo en la capa de vista y es fácil de integrar con otras bibliotecas o proyectos existentes. Por otro lado, Vue también es perfectamente capaz de impulsar aplicaciones sofisticadas de una sola página cuando se usa en combinación con herramientas modernas y bibliotecas de soporte.
+
+Consulte [Comparación con otros frameworks](https://vuejs.org/v2/guide/comparison.html) para obtener información de cómo se compara Vue con otras bibliotecas/frameworks.
+
+
 
 ### Sass
 [Sass](https://sass-lang.com/) (*Syntactically Awesome Stylesheets*) es un metalenguaje de CSS. Permite usar funcionalidades que no existen en CSS, pero todas las funcionalidades de CSS funcionan también en Sass. Esisten dos tipos de formatos que Sass interpreta: `.scss` y `.sass`. La diferencia radica en la sintaxis y [aquí](https://sass-lang.com/documentation/syntax) puedes compararlos. En la DAI se suele usar el formato `.scss`.
@@ -638,9 +655,9 @@ Los ejemplos que aquí se han abordado están basados en [este tutoria](https://
 
 
 ### OpenLayers
-OpenLayers facilita la colocación de un mapa dinámico en cualquier página web. Puede mostrar mosaicos de mapas, datos vectoriales y marcadores cargados desde cualquier fuente. OpenLayers se ha desarrollado para promover el uso de información geográfica de todo tipo. Es de código abierto completamente gratuito (JavaScript).
+[OpenLayers](https://openlayers.org/) facilita la colocación de un mapa dinámico en cualquier página web. Puede mostrar mosaicos de mapas, datos vectoriales y marcadores cargados desde cualquier fuente. OpenLayers se ha desarrollado para promover el uso de información geográfica de todo tipo. Es de código abierto completamente gratuito (JavaScript).
 
-#### Instalación
+#### Instalación en el proyecto
 Utilizando __nodejs__, el comando de instalación es el siguiente:
 ```
 npm install ol
