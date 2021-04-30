@@ -26,6 +26,7 @@ Al mes de abril de 2021 se usa la versión 14 de node en la DAI, esta es la vers
 Si no lo tienes instalado, puedes instalarlo mediante `nvm` (node version manager), considerado una de las mejores opciones para instalar node.
 
 1. Instalación de  `nvm`
+
     **Linux/MacOS**
 
     En la consola de tu equipo ejecutar el siguiente comando
@@ -108,6 +109,16 @@ Por lo general, el proyecto tendrá una carpeta `src` que es en dónde se alojar
 Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de desarrollo que se explicará más adelante. El uso de esta herramienta nos ayudará a estructurar el proyecto.
 
 
+### Vue CLI
+Vue CLI es un sistema completo para el desarrollo rápido de Vue.js, que proporciona:
+
+* Soporte de proyectos interactivos a través de @vue/cli.
+* Creación rápida de prototipos de configuración cero a través de @vue/cli + @vue/cli-service-global.
+* Una interfaz gráfica de usuario completa para crear y administrar proyectos de Vue.js.
+
+Vue CLI tiene como objetivo ser la línea de base de herramientas estándar para el ecosistema Vue. Garantiza que las diversas herramientas de compilación funcionen sin problemas junto con valores predeterminados razonables para que pueda concentrarse en escribir su aplicación en lugar de pasar días luchando con configuraciones. Al mismo tiempo, todavía ofrece la flexibilidad de modificar la configuración de cada herramienta sin la necesidad de expulsarla.
+
+
 
 
 ### Geoserver
@@ -164,8 +175,6 @@ GeoServer está empaquetado como un servlet independiente para usar con servidor
 6. Utilice el método de su aplicación contenedora para iniciar y detener aplicaciones web para ejecutar GeoServer.
 7. Para acceder a la [interfaz de administración web](https://docs.geoserver.org/stable/en/user/webadmin/index.html#web-admin), abra un navegador y navegue hasta `http://SERVER/geoserver`. Por ejemplo, con Tomcat ejecutándose en el puerto 8080 en localhost, la URL sería `http://localhost:8080/geoserver`.
 
-#### Levantar imagen de geoserver con Docker
-
 
 #### Crear un espacio de trabajo
 Un espacio de trabajo es un contenedor que se utiliza para agrupar capas similares.
@@ -196,16 +205,18 @@ Una vez que se crea el espacio de trabajo, estamos listos para agregar un nuevo 
 4. Haga clic en __PostGIS__.
 5. Ingrese la información básica del almacén (Workspace, Data Source Name, Description).
 6. Especifique los parámetros de __conexión__ de la base de datos PostGIS:
-| Option | Value |
-| ------ | ----- |
-| dbtype | `postgis` |
-| host | (`db host`) |
-| port | (`db port`) |
-| database | (`db name`) |
-| schema | (`db schema`) |
-| user | (`postgres user`) |
-| passwd | (Password for the `postgres` user) |
-| validate connections | (Checked) |
+
+    | Option | Value |
+    | ------ | ----- |
+    | dbtype | `postgis` |
+    | host | (`db host`) |
+    | port | (`db port`) |
+    | database | (`db name`) |
+    | schema | (`db schema`) |
+    | user | (`postgres user`) |
+    | passwd | (Password for the `postgres` user) |
+    | validate connections | (Checked) |
+
 7. Clic en __Guardar__.
 
 #### Publicar capas geográficas
@@ -234,7 +245,12 @@ Para verificar que la capa se publicó correctamente, podemos obtener una vista 
 
 
 ## Librerías 
-### Vue
+### Vue.js
+[Vue](https://vuejs.org/) es un framework progresivo para construir interfaces de usuario. A diferencia de otros frameworks monolíticos, Vue está diseñado desde cero para ser adoptable de forma incremental. La biblioteca principal se centra solo en la capa de vista y es fácil de integrar con otras bibliotecas o proyectos existentes. Por otro lado, Vue también es perfectamente capaz de impulsar aplicaciones sofisticadas de una sola página cuando se usa en combinación con herramientas modernas y bibliotecas de soporte.
+
+Consulte [Comparación con otros frameworks](https://vuejs.org/v2/guide/comparison.html) para obtener información de cómo se compara Vue con otras bibliotecas/frameworks.
+
+
 
 ### Sass
 [Sass](https://sass-lang.com/) (*Syntactically Awesome Stylesheets*) es un metalenguaje de CSS. Permite usar funcionalidades que no existen en CSS, pero todas las funcionalidades de CSS funcionan también en Sass. Esisten dos tipos de formatos que Sass interpreta: `.scss` y `.sass`. La diferencia radica en la sintaxis y [aquí](https://sass-lang.com/documentation/syntax) puedes compararlos. En la DAI se suele usar el formato `.scss`.
@@ -638,14 +654,99 @@ Los ejemplos que aquí se han abordado están basados en [este tutoria](https://
 
 
 
-
-
-
-
-
- 
-
 ### OpenLayers
+[OpenLayers](https://openlayers.org/) facilita la colocación de un mapa dinámico en cualquier página web. Puede mostrar mosaicos de mapas, datos vectoriales y marcadores cargados desde cualquier fuente. OpenLayers se ha desarrollado para promover el uso de información geográfica de todo tipo. Es de código abierto completamente gratuito (JavaScript).
+
+#### Instalación en el proyecto
+Utilizando __nodejs__, el comando de instalación es el siguiente:
+```
+npm install ol
+```
+
+#### Ejemplos básicos
+
+1. Un mapa simple con una fuente OSM.
+
+main.js
+```
+import 'ol/ol.css';
+import Map from 'ol/Map';
+import OSM from 'ol/source/OSM';
+import TileLayer from 'ol/layer/Tile';
+import View from 'ol/View';
+
+var map = new Map({
+  layers: [
+    new TileLayer({
+      source: new OSM(), // mapa base de openStreetMap
+    }) ],
+  target: 'map',
+  view: new View({
+    center: [0, 0], // Centro del mapa (coordenadas)
+    zoom: 2,
+  }),
+});
+```
+
+HTML
+```
+<div id="map" class="map"></div>
+```
+
+2. Consumiendo un servicios wms/wfs
+
+JS
+```
+import 'ol/ol.css';
+import ImageWMS from 'ol/source/ImageWMS';
+import Map from 'ol/Map';
+import OSM from 'ol/source/OSM';
+import View from 'ol/View';
+import GeoJSON from 'ol/format/GeoJSON';
+import VectorSource from 'ol/source/Vector';
+import {Stroke, Style} from 'ol/style';
+import {bbox as bboxStrategy} from 'ol/loadingstrategy';
+import {Image as ImageLayer, Tile as TileLayer, Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
+
+var layers = [
+  new TileLayer({source: new OSM()}),
+  new ImageLayer({ // wms service
+    source: new ImageWMS({
+      url: '<url del servicio wms>',
+      params: {'LAYERS': 'topp:states'},
+      ratio: 1,
+      serverType: 'geoserver',
+    }),
+  }),
+  new VectorLayer({ // wfs service
+    source: new VectorSource({
+      format: new GeoJSON(),
+        url: function (extent) {
+            return ('<url del servicio wfs>');
+        },
+        strategy: bboxStrategy,
+      }),
+      style: new Style({
+        stroke: new Stroke({
+        color: 'rgba(0, 0, 255, 1.0)',
+        width: 2,
+      }),
+    }),
+  })
+];
+var map = new Map({
+  layers: layers,
+  target: 'map',
+  view: new View({
+    center: [-10997148, 4569099],
+    zoom: 4,
+  }),
+});
+```
+
+Para más ejemplo prácticos consulte [OpenLayers Examples](https://openlayers.org/en/latest/examples/index.html). Para la documentación competa de los componentes el [OpenLayers Apidoc](https://openlayers.org/en/latest/apidoc/).
+
+
 ### Simple statistics
 
 [Simple statistics](https://simplestatistics.org/) es una librería de JavaScript para implementar métodos estadísticos. En la DAI se ha usado para implementar el método de clasificación con cortes naturales (jenks) para algunos mapas, ya que hay veces en que los cuantiles dan resultados no deseados.
