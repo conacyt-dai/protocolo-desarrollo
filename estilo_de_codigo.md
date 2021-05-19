@@ -52,7 +52,7 @@ Depender de abstracciones y no de implementaciones, establece que
 
 ## Código limpio
 
-A continuación se rescatan algunas recomendaciones de *Clean code*, de Uncle Bob 
+A continuación se rescatan algunas recomendaciones de *Clean code*, de Uncle Bob. [Aquí](https://drive.google.com/file/d/1VCYcai5RYdZXyOKT8UXjtgHAKPIudxLF/view?usp=sharing) puedes consultar el libro. Si aún no tienes acceso, puedes solicitarlo a les demás DEVS de la DAI.
 
 ### Nombres significativos
 
