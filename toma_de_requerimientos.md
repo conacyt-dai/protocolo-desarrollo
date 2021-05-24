@@ -35,3 +35,5 @@ El documento que comúnmente se usa como el levantamiento del requerimiento es e
 * Periodicidad de actualización
 * Duración del mantenimiento a la página
 * Alojamiento de archivos y espacio proyectado (ej. reportes PDF y PPT)
+* Otras consideraciones para determinar si el sitio requiere back-end, seguridad y bases de datos.
+
