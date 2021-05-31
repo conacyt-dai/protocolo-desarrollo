@@ -37,3 +37,4 @@ El documento que comúnmente se usa como el levantamiento del requerimiento es e
 * Alojamiento de archivos y espacio proyectado (ej. reportes PDF y PPT)
 * Otras consideraciones para determinar si el sitio requiere back-end, seguridad y bases de datos.
 
+A su vez, se deben especificar con detalle los casos de uso y las historias de usuario, es decir todos los pasos que puede llevar a cabo el usuario con las funciones del sistema.
