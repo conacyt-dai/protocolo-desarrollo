@@ -6,49 +6,35 @@
 
 ### [Toma de requerimientos](toma_de_requerimientos.md)
 
-
-### [Tecnologías y librerías sugeridads (back y front end)](tecnologias_y_librerias.md)
-Tecnologías
+### [Tecnologías y librerías sugeridas](tecnologias_y_librerias.md)
 * Node
 * Geoserver
-* Django
-
-
-Librerías 
 * Vue
 * Sass
 * D3
 * OpenLayers
 * Simple statistics
-* Jekill
-* Amcharts
-* Bulma
-
+* *Django (por hacer)*
+* *Jekyll (por hacer)*
+* *Amcharts (por hacer)*
+* *Bulma (por hacer)*
 
 ### [Control de versiones](control_versiones.md)
 
-* Flujo de git 
-* Ejemplos con comandos
-
 ### [Requerimientos mínimos de documentación de proyectos](documentacion_de_proyectos.md)
+* Readme
 
 ### [Testing](testing.md)
-
+* Vue
+* *Python (por hacer)*
 
 ### [Flujos para solicitud de recursos](solicitud_de_recursos.md)
-
-Petición de repositorios
-* Descripción, grupo, propietario, colaboradores, etc
-* Plantilla de solicitud
-
-Petición de servidores
-* Descripción, stacks y áreas responsables
-* Plantilla
-
-Petición de dominios
-* Descripción
-* Plantilla
+* Repositorios
+* Servidores
+* Dominios
 
 ### [Estilo de código](estilo_de_codigo.md)
-
-### [Despliegue](despliegue.md)
+* Convenciones
+* Principio DRY
+* Principio SOLID
+* *Por definir uso del idioma*
