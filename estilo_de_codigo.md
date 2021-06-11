@@ -3,7 +3,7 @@
 ## Convenciones de desarrollo en la DAI
 
 El equipo de desarrollo deberá leer e implementar las recomendaciones que se encuentran en la [guía de desarrollo](https://github.com/flkt-crnpio/dai-guia-de-buenas-practicas).
-Adoptaremos la convención de escribir las variables con el estilo `snake_case` y las funciones de javascript con `camelCase`, Además, las variables de tipo booleano deberán tener el prefijo `is_`.
+Adoptaremos la convención de escribir las variables con el estilo `snake_case` y las funciones de javascript con `camelCase`, Además, las variables de tipo booleano deberán tener el prefijo `es_`.
 
 A continuación se exponen una serie de conceptos que deberán ser puestos en práctica por el equipo de desarrollo de la DAI.
 
@@ -49,6 +49,14 @@ Depender de abstracciones y no de implementaciones, establece que
 
 * Las abstracciones no deberían depender de los detalles. Son los detalles los que deberían depender de las abstracciones.
 
+
+## Idioma 
+
+* Se conservan los nombres nativos en inglés del framework o tecnología que se esté usando. En el caso de los componentes, se respetarán los nombres nativos o sugeridos por vue y d3, como por ejemplo en vue methods, computed, etc., siempre se escriben en inglés.
+
+* En la capa de servicios o negocio, las funciones, nombres de variables, etc., pueden ir en español para validar casos de uso e historias de usuario.
+
+*  En la capa de persistencia, se puede usar el patrón de diseño de Repository, en donde al combinarlo con los elementos propios del framework o tecnología se tendrá una mezcla de idiomas.
 
 ## Código limpio
 
