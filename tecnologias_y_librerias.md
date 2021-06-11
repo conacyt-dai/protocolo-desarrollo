@@ -1,7 +1,7 @@
-# Tecnologías y librerías sugeridads (back y front end)
+# Tecnologías y librerías sugeridads
 
-## Tecnologías
-### Node
+
+## Node
 Node es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome y una arquitectura orientada a eventos. Está diseñado para crear aplicaciones network escalables, como por ejemplo,  servidores.
 
 Los puntos más fuertes de Node son :
@@ -21,7 +21,7 @@ En la DAI se ha usado node para crear aplicaciones web, las cuales, hasta ahora 
 
 A continuación se desarrollaran los pasos para inicializar un proyecto de este tipo.
 
-#### Instalación de node
+### Instalación de node
 Al mes de abril de 2021 se usa la versión 14 de node en la DAI, esta es la versión que actualmente proyecta una duración de vida más larga. Para saber si tienes instalado node y la versión, puedes ejecutar en la terminal `node -v`.
 Si no lo tienes instalado, puedes instalarlo mediante `nvm` (node version manager), considerado una de las mejores opciones para instalar node.
 
@@ -87,9 +87,7 @@ Si no lo tienes instalado, puedes instalarlo mediante `nvm` (node version manage
     nvm alias stable 14.16.1
     ```
 
-
-
-#### Iniciando un proyecto en node.js
+### Iniciando un proyecto en node.js
 
 `npm` es el sistema de gestión de paquetes por defecto de Node.js. Podemos verificar su instalación con `npm -v`, aunque debería estar ya instalado si se realizaron los pasos de la sección anterior.
 
@@ -109,33 +107,25 @@ Por lo general, el proyecto tendrá una carpeta `src` que es en dónde se alojar
 Cabe mencionar que muchos de los proyectos se usará `Vue CLI`, un framework de desarrollo que se explicará más adelante. El uso de esta herramienta nos ayudará a estructurar el proyecto.
 
 
-### Vue CLI
-Vue CLI es un sistema completo para el desarrollo rápido de Vue.js, que proporciona:
+## Geoserver
+<div style="text-align: center;">
 
-* Soporte de proyectos interactivos a través de @vue/cli.
-* Creación rápida de prototipos de configuración cero a través de @vue/cli + @vue/cli-service-global.
-* Una interfaz gráfica de usuario completa para crear y administrar proyectos de Vue.js.
+[<img src="https://docs.geoserver.org/stable/en/user/_static/chrome/geoserver-logo.png" />](https://geoserver.org)
 
-Vue CLI tiene como objetivo ser la línea de base de herramientas estándar para el ecosistema Vue. Garantiza que las diversas herramientas de compilación funcionen sin problemas junto con valores predeterminados razonables para que pueda concentrarse en escribir su aplicación en lugar de pasar días luchando con configuraciones. Al mismo tiempo, todavía ofrece la flexibilidad de modificar la configuración de cada herramienta sin la necesidad de expulsarla.
-
-
-
-
-### Geoserver
-[<div align="center"><img src="https://docs.geoserver.org/stable/en/user/_static/chrome/geoserver-logo.png" /></div>](https://geoserver.org)
+</div>
 
 GeoServer es un servidor de código abierto para compartir datos geoespaciales. Diseñado para la interoperabilidad, publica datos de cualquier fuente de datos espaciales importante utilizando estándares abiertos.
 
 GeoServer implementa protocolos OGC estándar de la industria, como Web Feature Service (WFS), Web Map Service (WMS) y Web Coverage Service (WCS). Hay formatos y opciones de publicación adicionales disponibles como extensiones, incluido el Servicio de procesamiento web (WPS) y el Servicio de mosaicos de mapas web (WMTS).
 
-#### Instalación
+### Instalación
 Para instalar con un servidor de aplicaciones existente como Tomcat, consulte la sección de archivo web.
 
 GeoServer requiere un entorno Java 8 o Java 11, disponible en [OpenJDK](http://openjdk.java.net/), [AdoptOpenJDK](https://adoptopenjdk.net/) o proporcionado por la distribución de su sistema operativo.
 
 **Nota:** _Para obtener más información sobre Java y GeoServer, consulte la sección sobre [Consideraciones de Java](https://docs.geoserver.org/stable/en/user/production/java.html#production-java)._
 
-##### Linux binary
+#### Linux binary
 El binario independiente de la plataforma es una aplicación web GeoServer incluida dentro de Jetty, un servidor de aplicaciones portátil y ligero. Tiene las ventajas de funcionar de manera muy similar en todos los sistemas operativos y es muy simple de configurar.
 
 1. Asegúrese de tener un Java Runtime Environment (JRE) instalado en su sistema.
@@ -164,7 +154,7 @@ Si ve el logotipo de GeoServer, entonces GeoServer se instaló correctamente.
 
 Para apagar GeoServer, cierre la ventana de línea de comandos persistente o ejecute el archivo `shutdown.sh` dentro del directorio `bin`.
 
-##### Web archive
+#### Web archive
 GeoServer está empaquetado como un servlet independiente para usar con servidores de aplicaciones existentes como Apache Tomcat y Jetty.
 
 1. Asegúrese de tener un Java Runtime Environment (JRE) instalado en su sistema.
@@ -176,7 +166,7 @@ GeoServer está empaquetado como un servlet independiente para usar con servidor
 7. Para acceder a la [interfaz de administración web](https://docs.geoserver.org/stable/en/user/webadmin/index.html#web-admin), abra un navegador y navegue hasta `http://SERVER/geoserver`. Por ejemplo, con Tomcat ejecutándose en el puerto 8080 en localhost, la URL sería `http://localhost:8080/geoserver`.
 
 
-#### Crear un espacio de trabajo
+### Crear un espacio de trabajo
 Un espacio de trabajo es un contenedor que se utiliza para agrupar capas similares.
 
 __Nota:__ _Este paso es opcional si desea utilizar un espacio de trabajo existente. Por lo general, se crea un espacio de trabajo para cada proyecto, que puede incluir tiendas y capas que están relacionadas entre sí._
@@ -195,7 +185,7 @@ __Nota:__ _Este paso es opcional si desea utilizar un espacio de trabajo existen
 __Nota:__ _El nombre de un espacio de trabajo es un identificador que describe su proyecto. No debe exceder los diez caracteres ni contener espacios. Un URI de espacio de nombres (Identificador uniforme de recursos) generalmente puede ser una URL asociada con su proyecto con un identificador final agregado que indica el espacio de trabajo. El URI del espacio de nombres archivado no necesita resolverse en una dirección web válida real._
 7. Haga clic en el botón __Enviar__. El espacio de trabajo de `workspace` se agregará a la lista de espacios de trabajo.
 
-#### Crear un almacén de datos con origen de postgis
+### Crear un almacén de datos con origen de postgis
 Una vez que se crea el espacio de trabajo, estamos listos para agregar un nuevo almacén de datos. Los almacenes de datos le dice a GeoServer cómo conectarse al archivo geográfico.
 1. Vaya a __Data__ ‣ __Stores__.
 2. Debería ver una lista de almacenes de datos, incluido el tipo de almacén y el espacio de trabajo al que pertenece.
@@ -219,7 +209,7 @@ Una vez que se crea el espacio de trabajo, estamos listos para agregar un nuevo 
 
 7. Clic en __Guardar__.
 
-#### Publicar capas geográficas
+### Publicar capas geográficas
 Ahora que el almacén está preparado, podemos publicar la capa.
 1. Vaya a __Data__ ‣ __Layers__.
 2. Haga clic en __Add a new resource__.
@@ -241,23 +231,32 @@ Para verificar que la capa se publicó correctamente, podemos obtener una vista 
 2. Haga clic en el enlace __OpenLayers__ en la columna de formatos comunes.
 3. Un mapa de OpenLayers se cargará en una nueva pestaña y mostrará los datos del shapefile con el estilo predeterminado. Puede utilizar este mapa de vista previa para hacer zoom y desplazarse por el conjunto de datos, así como para mostrar los atributos de las entidades.
 
-### Django
 
 
-## Librerías 
-### Vue.js
+## Vue CLI
+[Vue CLI](https://cli.vuejs.org/) es un sistema completo para el desarrollo rápido de Vue.js, que proporciona:
+
+* Soporte de proyectos interactivos a través de @vue/cli.
+* Creación rápida de prototipos de configuración cero a través de @vue/cli + @vue/cli-service-global.
+* Una interfaz gráfica de usuario completa para crear y administrar proyectos de Vue.js.
+
+
+Vue CLI tiene como objetivo ser la línea de base de herramientas estándar para el ecosistema Vue. Garantiza que las diversas herramientas de compilación funcionen sin problemas junto con valores predeterminados razonables para que pueda concentrarse en escribir su aplicación en lugar de pasar días luchando con configuraciones. Al mismo tiempo, todavía ofrece la flexibilidad de modificar la configuración de cada herramienta sin la necesidad de expulsarla.
+
+## Vue
+
 [Vue](https://vuejs.org/) es un framework progresivo para construir interfaces de usuario. A diferencia de otros frameworks monolíticos, Vue está diseñado desde cero para ser adoptable de forma incremental. La biblioteca principal se centra solo en la capa de vista y es fácil de integrar con otras bibliotecas o proyectos existentes. Por otro lado, Vue también es perfectamente capaz de impulsar aplicaciones sofisticadas de una sola página cuando se usa en combinación con herramientas modernas y bibliotecas de soporte.
 
 Consulte [Comparación con otros frameworks](https://vuejs.org/v2/guide/comparison.html) para obtener información de cómo se compara Vue con otras bibliotecas/frameworks.
 
 
 
-### Sass
+## Sass
 [Sass](https://sass-lang.com/) (*Syntactically Awesome Stylesheets*) es un metalenguaje de CSS. Permite usar funcionalidades que no existen en CSS, pero todas las funcionalidades de CSS funcionan también en Sass. Esisten dos tipos de formatos que Sass interpreta: `.scss` y `.sass`. La diferencia radica en la sintaxis y [aquí](https://sass-lang.com/documentation/syntax) puedes compararlos. En la DAI se suele usar el formato `.scss`.
 
 Algunas de las funcionalidades básicas que se pueden implementar en Sass, a diferencia de CSS, se describen mediante ejemplos a continuación con la finalidad de sacar el máximo provecho a esta herramienta (los ejemplos son tomados de [aquí](https://sass-lang.com/guide)):
 
-#### Variables
+### Variables
 
 **SCSS**
 ```
@@ -279,7 +278,7 @@ body {
 ```
 La gran ventaja de esto es poder guardar parámetros de diseño en variables, y si estos cambian en el futuro, se pueden modificar en una sola línea y no en cada línea que se usó.
 
-#### Anidamiento *(Nesting)*
+### Anidamiento *(Nesting)*
 
 **SCSS**
 ```
@@ -319,7 +318,7 @@ nav a {
 ```
 Sass puede preservar la jerarquía de elementos en HTML mediante los selectores de CSS
 
-#### Modularización 
+### Modularización 
 
 Puedes escribir fragmentos parciales de Sass e incluirlos en otros archivos. Esta es una buena práctica para modularizar los estilos. Este tipo de archivos se deben nombrar iniciando con un guión bajo, por ejemplo `_base.scss` o `_variables.scss`. El guion bajo le permite saber a Sass que el archivo es parcial y que no debe ser procesado a CSS. Para importar el archivo se usa `rule`.
 
@@ -363,7 +362,7 @@ body {
 
 Modularizar los estilos hace que sean más fáciles de mantener.
 
-#### Mixins
+### Mixins
 **SCSS**
 ```
 @mixin transform($property) {
@@ -387,7 +386,7 @@ Modularizar los estilos hace que sean más fáciles de mantener.
 
 Permite escribir bloques de CSS y llamarlos como si fuera una función pasándo un parámetro.
 
-#### Extend / herencia
+### Extend / herencia
 **SCSS**
 ```
 /* This CSS will print because %message-shared is extended. */
@@ -448,7 +447,7 @@ Permite escribir bloques de CSS y llamarlos como si fuera una función pasándo 
 
 Permite escribir bloques propiedades de css y extenderlos a otros selectores
 
-#### Operadores
+### Operadores
 **SCSS**
 ```
 .container {
@@ -491,11 +490,11 @@ Sass permite realizar operaciones matemáticas con los operadores `+`, `-`, `*` 
 
 
 
-### D3
+## D3
 
 Data-Driven-Documents [D3](https://d3js.org/) es conocida como una de las librerías de JavaScript más poderosas para visualizar datos, cuenta con una amplia [documentación](https://github.com/d3/d3/wiki) y su uso radica en ligara bases de datos a elementos de HTML, principalmente de SVG; de tal forma que, datos numéricos, temporales o categoricos se asocien a estilos y atributos de los elementos HTML o SVG. De esta forma se logra la transducción de una base de datos a una visualización web. Al mes de abril de 2021, en la DAI se usa la versión 6 de D3.
 
-#### Introducción a D3.js
+### Introducción a D3.js
 
 El entorno SVG (*Scalable Vector Graphics*) nos permite dibujar una amplia variedad de gráficos como puntos, rectángulos, curvas, polígonos, etc. Este tipo de gráficos se ajusta a diferentes tamaños de pantalla y la resolución no se pixelea.
 
@@ -651,19 +650,16 @@ Si deseas profundizar más en este tema, se hizo [este](https://github.com/jdani
 Los ejemplos que aquí se han abordado están basados en [este tutoria](https://observablehq.com/@uvizlab/d3-tutorial-2-introduction-to-d3-with-observable?collection=@uvizlab/d3-tutorial) y se recomienda [este](https://observablehq.com/@d3/learn-d3-by-example?collection=@d3/learn-d3) otro que es más avanzado. Cabe mencionar que observabe es una especie de notebooks para crear visualizaciones de datos y la estructura puede parecer a veces un poco distinta la la de un script de js, por lo cual hay que leer los ejemplos con cuidado.
 
 
-
-
-
-### OpenLayers
+## OpenLayers
 [OpenLayers](https://openlayers.org/) facilita la colocación de un mapa dinámico en cualquier página web. Puede mostrar mosaicos de mapas, datos vectoriales y marcadores cargados desde cualquier fuente. OpenLayers se ha desarrollado para promover el uso de información geográfica de todo tipo. Es de código abierto completamente gratuito (JavaScript).
 
-#### Instalación en el proyecto
+### Instalación en el proyecto
 Utilizando __nodejs__, el comando de instalación es el siguiente:
 ```
 npm install ol
 ```
 
-#### Ejemplos básicos
+### Ejemplos básicos
 
 1. Un mapa simple con una fuente OSM.
 
@@ -747,7 +743,7 @@ var map = new Map({
 Para más ejemplo prácticos consulte [OpenLayers Examples](https://openlayers.org/en/latest/examples/index.html). Para la documentación competa de los componentes el [OpenLayers Apidoc](https://openlayers.org/en/latest/apidoc/).
 
 
-### Simple statistics
+## Simple statistics
 
 [Simple statistics](https://simplestatistics.org/) es una librería de JavaScript para implementar métodos estadísticos. En la DAI se ha usado para implementar el método de clasificación con cortes naturales (jenks) para algunos mapas, ya que hay veces en que los cuantiles dan resultados no deseados.
 
@@ -770,9 +766,10 @@ Si hay alguna duda sobre como funciona `scaleThreshold()` se recomienda consulta
 
 A pesar de que Simple statistics es una vasta librería, hasta ahora en la DAI, este es e único uso que se le ha dado. No obstante, es bueno revisarla y saber de su existencia por si en un futuro se requiere implementar otros métodos estadísticos. 
 
+___
 
-
-
-### Jekill*
-### Amcharts*
-### Bulma*
+Para proximas entregas se planea documentar 
+* Django
+* Jekill (dependiendo de si se segurá utilizando)
+* Amcharts
+* Bulma
