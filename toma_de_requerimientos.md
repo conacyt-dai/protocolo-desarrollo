@@ -4,7 +4,7 @@ Para llevar a cabo un proyecto de forma óptima, evitando conflictos a futuro so
 
 El objetivo de este apartado es que el equipo de desarrollo tenga claro cuales son los puntos que se deben tener claros cuando se nos solicita un desarrollo, y que quienes nos lo soliciten procuren cubrir todos estos puntos al comunicar sus requerimientos.
 
-A continuación se mencionan algunas de las características que debe tener un requerimiento según Northware [1](https://www.northware.mx/2012/01/15/tecnicas_efectivas_toma_requerimientos/)
+A continuación se mencionan algunas de las características que debe tener un requerimiento según [Northware](https://www.northware.mx/2012/01/15/tecnicas_efectivas_toma_requerimientos/)
 
 * **Necesario:** Si hay alguna duda sobre la necesidad del requerimiento, se puede preguntar ¿Qué sería lo peor de no incluirlo?, si no se encuentra una respuesta o consecuencia, es probable que no sea un requerimiento necesario. 
 
@@ -12,22 +12,22 @@ A continuación se mencionan algunas de las características que debe tener un r
 
 * **Completo:** Se proporciona información suficiente para la comprensión del requerimiento.
 
-* **Consistente:** No se contradice con otro requerimiento
-	
-	Ejemplo de inconsistencias:
+* **Consistente:** No se contradice con otro requerimiento. Ejemplo de inconsistencias:
 	* Un mapa con sólo front-end que muestre polígonos de AGEBS de todo el país
 	* Que cargue rápido
-
+	
 * **Factible:** El requerimiento debe ser realizable dentro de los calendarios y otras restricciones del equipo. Si hay dudas sobre su factibilidad, se debe dar un tiempo para investigar y realizar pruebas.
 
-* **Modificable:** Quienes desarrollamos en la DAI, debemos estar abiertos y ser conscientes de que los requerimientos pueden cambiar.
+* **Modificable:** Quienes desarrollamos en la DAI, debemos estar abiertos y ser conscientes de que los requerimientos pueden cambiar. Sin embargo, será necesario hacer una recalendarización de los tiempos de entrega debido a los nuevos requerimientos o la modificación de los mismos
 
-* **Priorizado:** Categorizar en Esencial, Deseado, Opcional nos ayuda a organizar nuestros tiempos. Estas categorías normalmente se definen en las subdirecciones y por lo general todos los requerimientos suelen ser esenciales.
+* **Priorizado:** Categorizar en _Esencial_, _Deseado_, u _Opcional_ nos ayuda a organizar nuestros tiempos. Estas categorías normalmente se definen en las subdirecciones y por lo general todos los requerimientos suelen ser esenciales.
 
-* **Verificable**
+* **Verificable:** 
 
 
-El documento que comúnmente se usa como el levantamiento del requerimiento es el diseño, normalmente en XD, elaborado por la Subdirección de Visualización de Datos de la DAI. Lo ideal es que el desarrollo inicie hasta que se tenga el requerimiento, es decir el diseño, sin embargo hay algunas otras cuestiones que no necesariamente se tienen siempre en el XD, por lo cual se mencionan a continuación algunos requerimientos que, en experiencia del equipo de desarrollo, han sido importante tener claro y preguntar antes de iniciar el proyecto:
+
+
+El documento que comúnmente se usa como el levantamiento del requerimiento es el diseño, normalmente en XD, elaborado por la Subdirección de Visualización de Datos de la DAI. Lo ideal es que el desarrollo inicie hasta que se tenga el requerimiento, es decir el diseño, sin embargo hay algunas otras cuestiones que no necesariamente se tienen siempre en XD, por lo cual se mencionan a continuación algunos requerimientos que, en experiencia del equipo de desarrollo, han sido importante tener claro y preguntar antes de iniciar el proyecto:
 
 * Sitio con distintos usuarios y permisos
 * Servicios de mapas
