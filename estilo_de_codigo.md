@@ -87,7 +87,6 @@ Depender de abstracciones y no de implementaciones, establece que
 * Los módulos de alto nivel no deberían depender de los de bajo nivel. Ambos deberán depender de abstracciones
 
 * Las abstracciones no deberían depender de los detalles. Son los detalles los que deberían depender de las abstracciones.
-<<<<<<< HEAD
 
 
 ## Idioma 
@@ -97,44 +96,3 @@ Depender de abstracciones y no de implementaciones, establece que
 * En la capa de servicios o negocio, las funciones, nombres de variables, etc., pueden ir en español para validar casos de uso e historias de usuario.
 
 *  En la capa de persistencia, se puede usar el patrón de diseño de Repository, en donde al combinarlo con los elementos propios del framework o tecnología se tendrá una mezcla de idiomas.
-
-## Código limpio
-
-A continuación se rescatan algunas recomendaciones de *Clean code*, de Uncle Bob. [Aquí](https://drive.google.com/file/d/1VCYcai5RYdZXyOKT8UXjtgHAKPIudxLF/view?usp=sharing) puedes consultar el libro. Si aún no tienes acceso, puedes solicitarlo a les demás DEVS de la DAI.
-
-### Nombres significativos
-
-Debemos utilizar nombres de variables y de funciones que revelen la intención o uso de ésta, de manera clara, que sean pronunciables y fáciles de buscar. La única excepción pueden ser variables que se usan en ciclos o mapeos de arrays. Las funciones preferentemente deberían contener un verbo
-
-```
-//Mal
-var f=111;
-var fi=111;
-var fech_inic=111;
-var fch_inc=111;
-
-
-//Mejor
-var fecha_de_inicio=111
-```
-
-### Funciones
-
-- Deben ser tan cortas como se pueda. 
-- Es mejor tener muchas funciones cortas que menos funciones muy largas. 
-- Preferentemente su nivel de anidamiento no debería ser mayor de uno o dos, esto las hace más fácil de leer y entender. 
-- Debe hacer una cosa y la debe hacer bien. En este punto puede haber una ambigüedad sobre qué es hacer bien una cosa; lo ideal es que una función descomponga un concepto más grande (como lo debería indicar el nombre de la función) en un conjunto de pasos en el siguiente nivel de abstracción.
-- Un nivel de abstracción por función
-
-- Evitar pasar un booleano como argumento. ESto significaría que tu función puede hacer más de una cosa y que podría estar usando varios niveles de abstracción 
-
-- Si una función toma más de 3 argumentos, quizá lo mejor sea que tome objetos como argumento.
-
-### Comentarios
-
-- También se debe dar mantenimiento a los comentarios, ya que a veces el código se va modificando y nos olvidamos de revisar si los comentarios siguen vigentes. 
-- Un código limpio que no necesite comentarios es mucho mejor
-- Procura que el código se explique a sí mismo
-- Puedes explicar y clarificar cuando sea necesario, sin ser redundante
-=======
->>>>>>> 3914e0ccfc31a2d80318544d4d5be043f4f86e71
