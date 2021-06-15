@@ -22,7 +22,7 @@ Una vez que tengas acceso, puedes solicitar que se haga un nuevo repositorio, as
 
 **Grupo** se refiere al ENI al que pertenecerá el proyecto, o bien, al nombre del dominio general. Por ejemplo los ENIs `alimentacion`, `salud` ó el grupo general de `proyectos-crip`
 
-**Nombre** corresponde al nombre del capítulo, subcacítulo o carpeta que contiene al proyecto en el servidor. Puede tener los sufijos `-web` o `-data` que especifican si el repositorio corresponde a un proyecto de desarrollo web o a uno de procesamiento de datos respectivamente y se debe especifiar quien será propietarix.
+**Nombre** corresponde al nombre del capítulo, subcapítulo o carpeta que contiene al proyecto en el servidor. Puede tener los sufijos `-web` o `-data` que especifican si el repositorio corresponde a un proyecto de desarrollo web o a uno de procesamiento de datos respectivamente y se debe especifiar quien será propietarix.
 
 
 ## Servidores y dominios 
