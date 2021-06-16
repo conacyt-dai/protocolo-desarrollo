@@ -1,4 +1,11 @@
-|[Página principal](https://conacyt-dai.github.io/protocolo-desarrollo/)|[Toma de requerimientos](https://conacyt-dai.github.io/protocolo-desarrollo/toma_de_requerimientos.html)|[Tecnologías y bibliotecas sugeridas](https://conacyt-dai.github.io/protocolo-desarrollo/tecnologias_y_bibliotecas.html)|[Control de versiones](https://conacyt-dai.github.io/protocolo-desarrollo/control_versiones.html)|[Requerimientos mínimos de documentación](https://conacyt-dai.github.io/protocolo-desarrollo/documentacion_de_proyectos.html)|[Testing](https://conacyt-dai.github.io/protocolo-desarrollo/testing.html)|[Flujos para solicitud de recursos](https://conacyt-dai.github.io/protocolo-desarrollo/solicitud_de_recursos.html)|[Estilo de código](https://conacyt-dai.github.io/protocolo-desarrollo/estilo_de_codigo.html)
+|[Página principal](protocolo-desarrollo)|[Toma de requerimientos](toma_de_requerimientos)|[Tecnologías y bibliotecas sugeridas](https://conacyt-dai.github.io/protocolo-desarrollo/tecnologias_y_bibliotecas.html)|[Control de versiones](https://conacyt-dai.github.io/protocolo-desarrollo/control_versiones.html)|[Requerimientos mínimos de documentación](https://conacyt-dai.github.io/protocolo-desarrollo/documentacion_de_proyectos.html)|[Testing](https://conacyt-dai.github.io/protocolo-desarrollo/testing.html)|[Flujos para solicitud de recursos](https://conacyt-dai.github.io/protocolo-desarrollo/solicitud_de_recursos.html)|[Estilo de código](https://conacyt-dai.github.io/protocolo-desarrollo/estilo_de_codigo.html)
+
+<div class="topnav">
+  <a class="active" href="protocolo-desarrollo">Página principal</a>
+  <a href="toma_de_requerimientos">Toma de requerimientos</a>
+  <a href="tecnologias_y_bibliotecas">Tecnologías</a>
+  <a href="tecnologias_y_bibliotecas">Control de versiones</a>
+</div>
 
 # Toma de requerimientos
 
@@ -27,8 +34,6 @@ A continuación se mencionan algunas de las características que debe tener un r
 * **Verificable:** Determinar los criterios de aceptación y el sitio de demostración, prueba o inspección. Normalmente, estas revisiones se hacen en el ambiente de desarrollo antes de pasar a producción, a menos de que se requiera lo contrario.
 
 
-
-
 El documento que comúnmente se usa como el levantamiento del requerimiento es el diseño, normalmente en XD, elaborado por la Subdirección de Visualización de Datos de la DAI. Lo ideal es que el desarrollo inicie hasta que se tenga el requerimiento, es decir el diseño, sin embargo hay algunas otras cuestiones que no necesariamente se tienen siempre en XD, por lo cual se mencionan a continuación algunos requerimientos que, en experiencia del equipo de desarrollo, han sido importante tener claro y preguntar antes de iniciar el proyecto:
 
 * Sitio con distintos usuarios y permisos
@@ -40,3 +45,28 @@ El documento que comúnmente se usa como el levantamiento del requerimiento es e
 * Otras consideraciones para determinar si el sitio requiere back-end, seguridad y bases de datos.
 
 A su vez, se deben especificar con detalle los casos de uso y las historias de usuario, es decir todos los pasos que puede llevar a cabo el usuario con las funciones del sistema.
+
+
+<style>
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 8px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
