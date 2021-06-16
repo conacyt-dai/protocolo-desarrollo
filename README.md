@@ -1,11 +1,13 @@
 # Protocolo de desarrollo de la DAI, CRIP
 
-## Índice
+[Página principal](https://conacyt-dai.github.io/protocolo-desarrollo/)
 
-### Objetivo general
+## Objetivo general
 
 Definir los procesos de levantamiento de requerimientos, desarrollo, documentación, despliegue y mantenimiento de micro-sitios web que alojen información ilustrativa e interactiva en textos, gráficas, mapas o reportes con calidad, aplicando la adecuada arquitectura/infraestructura de software y hardware, específica para cada proyecto, que permita un flujo eficiente de las tecnologías utilizadas.
 
+
+## Índice
 
 ### [Toma de requerimientos](toma_de_requerimientos.md)
 
@@ -23,6 +25,7 @@ Definir los procesos de levantamiento de requerimientos, desarrollo, documentaci
 * *Bulma (por hacer)*
 
 ### [Control de versiones](control_versiones.md)
+* [Flujo de git](control_versiones.md#flujo-de-git)
 
 ### [Requerimientos mínimos de documentación de proyectos](documentacion_de_proyectos.md)
 * Readme
@@ -40,4 +43,4 @@ Definir los procesos de levantamiento de requerimientos, desarrollo, documentaci
 * Convenciones
 * Principio DRY
 * Principio SOLID
-* *Por definir uso del idioma*
+* Idioma

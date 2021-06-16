@@ -1,3 +1,5 @@
+|[`Página principal`](https://conacyt-dai.github.io/protocolo-desarrollo/)|[`Toma de requerimientos`](https://conacyt-dai.github.io/protocolo-desarrollo/toma_de_requerimientos.html)|[`Tecnologías y bibliotecas sugeridas`](https://conacyt-dai.github.io/protocolo-desarrollo/tecnologias_y_bibliotecas.html)|[`Control de versiones`](https://conacyt-dai.github.io/protocolo-desarrollo/control_versiones.html)|[`Requerimientos mínimos de documentación`](https://conacyt-dai.github.io/protocolo-desarrollo/documentacion_de_proyectos.html)|[`Testing`](https://conacyt-dai.github.io/protocolo-desarrollo/testing.html)|[`Flujos para solicitud de recursos`](https://conacyt-dai.github.io/protocolo-desarrollo/solicitud_de_recursos.html)|[`Estilo de código`](https://conacyt-dai.github.io/protocolo-desarrollo/estilo_de_codigo.html)
+
 # Toma de requerimientos
 
 Para llevar a cabo un proyecto de forma óptima, evitando conflictos a futuro sobre incompatibilidad, rendimiento, escalabilidad, etc. es importante tener una idea clara sobre los requerimientos que se esperan del desarrollo. Esto es crucial para determinar desde un inicio cuales son las tecnologías y flujos que se usarán en el proceso.
@@ -13,10 +15,8 @@ A continuación se mencionan algunas de las características que debe tener un r
 * **Completo:** Se proporciona información suficiente para la comprensión del requerimiento.
 
 * **Consistente:** No se contradice con otro requerimiento. Ejemplo de inconsistencias:
-	* Un mapa con sólo front-end que muestre polígonos de AGEBS de todo el país
-	* Que cargue rápido
-
-
+	* Un mapa con sólo front-end que muestre polígonos de AGEBS de todo el país.
+	* Que cargue rápido.<br><br>
 
 * **Factible:** El requerimiento debe ser realizable dentro de los calendarios y otras restricciones del equipo. Si hay dudas sobre su factibilidad, se debe dar un tiempo para investigar y realizar pruebas.
 
