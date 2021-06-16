@@ -6,7 +6,7 @@
 
 ### [Toma de requerimientos](toma_de_requerimientos.md)
 
-### [Tecnologías y librerías sugeridas](tecnologias_y_librerias.md)
+### [Tecnologías y bibliotecas sugeridas](tecnologias_y_bibliotecas.md)
 * Node
 * Geoserver
 * Vue

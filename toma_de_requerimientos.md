@@ -16,7 +16,8 @@ A continuación se mencionan algunas de las características que debe tener un r
 	* Un mapa con sólo front-end que muestre polígonos de AGEBS de todo el país
 	* Que cargue rápido
 
-	
+
+
 * **Factible:** El requerimiento debe ser realizable dentro de los calendarios y otras restricciones del equipo. Si hay dudas sobre su factibilidad, se debe dar un tiempo para investigar y realizar pruebas.
 
 * **Modificable:** Quienes desarrollamos en la DAI, debemos estar abiertos y ser conscientes de que los requerimientos pueden cambiar. Sin embargo, será necesario hacer una recalendarización de los tiempos de entrega debido a los nuevos requerimientos o la modificación de los mismos.

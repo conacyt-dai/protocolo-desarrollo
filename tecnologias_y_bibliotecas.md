@@ -1,4 +1,4 @@
-# Tecnologías y librerías sugeridads
+# Tecnologías y bibliotecas sugeridads
 
 
 ## Node
@@ -492,7 +492,7 @@ Sass permite realizar operaciones matemáticas con los operadores `+`, `-`, `*` 
 
 ## D3
 
-Data-Driven-Documents [D3](https://d3js.org/) es conocida como una de las librerías de JavaScript más poderosas para visualizar datos, cuenta con una amplia [documentación](https://github.com/d3/d3/wiki) y su uso radica en ligara bases de datos a elementos de HTML, principalmente de SVG; de tal forma que, datos numéricos, temporales o categoricos se asocien a estilos y atributos de los elementos HTML o SVG. De esta forma se logra la transducción de una base de datos a una visualización web. Al mes de abril de 2021, en la DAI se usa la versión 6 de D3.
+Data-Driven-Documents [D3](https://d3js.org/) es conocida como una de las bibliotecas de JavaScript más poderosas para visualizar datos, cuenta con una amplia [documentación](https://github.com/d3/d3/wiki) y su uso radica en ligara bases de datos a elementos de HTML, principalmente de SVG; de tal forma que, datos numéricos, temporales o categoricos se asocien a estilos y atributos de los elementos HTML o SVG. De esta forma se logra la transducción de una base de datos a una visualización web. Al mes de abril de 2021, en la DAI se usa la versión 6 de D3.
 
 ### Introducción a D3.js
 
@@ -745,7 +745,7 @@ Para más ejemplo prácticos consulte [OpenLayers Examples](https://openlayers.o
 
 ## Simple statistics
 
-[Simple statistics](https://simplestatistics.org/) es una librería de JavaScript para implementar métodos estadísticos. En la DAI se ha usado para implementar el método de clasificación con cortes naturales (jenks) para algunos mapas, ya que hay veces en que los cuantiles dan resultados no deseados.
+[Simple statistics](https://simplestatistics.org/) es una biblioteca de JavaScript para implementar métodos estadísticos. En la DAI se ha usado para implementar el método de clasificación con cortes naturales (jenks) para algunos mapas, ya que hay veces en que los cuantiles dan resultados no deseados.
 
 Suponiento que tienes un Array `data` de valores numéricos a clasificar en `n` cantidad de grupos, con la función `ss.jenks(data,n)` esto es posible y te devuelve los cortes naturales.
 
@@ -764,7 +764,7 @@ let scale = d3.scaleThreshold()
 ```
 Si hay alguna duda sobre como funciona `scaleThreshold()` se recomienda consultar la [documentación](https://github.com/d3/d3-scale/blob/master/README.md#threshold-scales), en resumen mapea números, según el intervalo o rango en el que se encuentren, a valores discretos.
 
-A pesar de que Simple statistics es una vasta librería, hasta ahora en la DAI, este es e único uso que se le ha dado. No obstante, es bueno revisarla y saber de su existencia por si en un futuro se requiere implementar otros métodos estadísticos. 
+A pesar de que Simple statistics es una vasta biblioteca, hasta ahora en la DAI, este es e único uso que se le ha dado. No obstante, es bueno revisarla y saber de su existencia por si en un futuro se requiere implementar otros métodos estadísticos. 
 
 ___
 
