@@ -1,10 +1,12 @@
-|[Página principal](protocolo-desarrollo)|[Toma de requerimientos](toma_de_requerimientos)|[Tecnologías y bibliotecas sugeridas](https://conacyt-dai.github.io/protocolo-desarrollo/tecnologias_y_bibliotecas.html)|[Control de versiones](https://conacyt-dai.github.io/protocolo-desarrollo/control_versiones.html)|[Requerimientos mínimos de documentación](https://conacyt-dai.github.io/protocolo-desarrollo/documentacion_de_proyectos.html)|[Testing](https://conacyt-dai.github.io/protocolo-desarrollo/testing.html)|[Flujos para solicitud de recursos](https://conacyt-dai.github.io/protocolo-desarrollo/solicitud_de_recursos.html)|[Estilo de código](https://conacyt-dai.github.io/protocolo-desarrollo/estilo_de_codigo.html)
-
 <div class="topnav">
-  <a class="active" href="protocolo-desarrollo">Página principal</a>
-  <a href="toma_de_requerimientos">Toma de requerimientos</a>
-  <a href="tecnologias_y_bibliotecas">Tecnologías</a>
-  <a href="tecnologias_y_bibliotecas">Control de versiones</a>
+  <a href="./">Página principal</a>
+  <a class="active" href="toma_de_requerimientos">Toma de requerimientos</a>
+  <a href="tecnologias_y_bibliotecas">Tecnologías y bibliotecas sugeridas</a>
+  <a href="control_versiones">Control de versiones</a>
+  <a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a>
+  <a href="testing">Testing</a>
+  <a href="solicitud_de_recursos">Flujos para solicitud de recursos</a>
+  <a href="estilo_de_codigo">Estilo de código</a>
 </div>
 
 # Toma de requerimientos
@@ -50,23 +52,29 @@ A su vez, se deben especificar con detalle los casos de uso y las historias de u
 <style>
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #155799, #159957);
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 
 .topnav a {
+  float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 8px;
+  padding: 6px 8px;
   text-decoration: none;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: rgba(255,255,255,0.2);
+  color: #f2f2f2;
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: rgba(255,255,255,0.08);
+  color: #f2f2f2;
 }
 </style>
