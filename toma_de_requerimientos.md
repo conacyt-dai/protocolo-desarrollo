@@ -15,14 +15,15 @@ A continuación se mencionan algunas de las características que debe tener un r
 * **Consistente:** No se contradice con otro requerimiento. Ejemplo de inconsistencias:
 	* Un mapa con sólo front-end que muestre polígonos de AGEBS de todo el país
 	* Que cargue rápido
+
 	
 * **Factible:** El requerimiento debe ser realizable dentro de los calendarios y otras restricciones del equipo. Si hay dudas sobre su factibilidad, se debe dar un tiempo para investigar y realizar pruebas.
 
-* **Modificable:** Quienes desarrollamos en la DAI, debemos estar abiertos y ser conscientes de que los requerimientos pueden cambiar. Sin embargo, será necesario hacer una recalendarización de los tiempos de entrega debido a los nuevos requerimientos o la modificación de los mismos
+* **Modificable:** Quienes desarrollamos en la DAI, debemos estar abiertos y ser conscientes de que los requerimientos pueden cambiar. Sin embargo, será necesario hacer una recalendarización de los tiempos de entrega debido a los nuevos requerimientos o la modificación de los mismos.
 
 * **Priorizado:** Categorizar en _Esencial_, _Deseado_, u _Opcional_ nos ayuda a organizar nuestros tiempos. Estas categorías normalmente se definen en las subdirecciones y por lo general todos los requerimientos suelen ser esenciales.
 
-* **Verificable:** 
+* **Verificable:** Determinar los criterios de aceptación y el sitio de demostración, prueba o inspección. Normalmente, estas revisiones se hacen en el ambiente de desarrollo antes de pasar a producción, a menos de que se requiera lo contrario.
 
 
 
