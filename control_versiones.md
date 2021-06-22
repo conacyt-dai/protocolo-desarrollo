@@ -43,14 +43,10 @@ En los [lineamientos](https://conacyt-arquitectura.github.io/git/) se pueden con
 
 
 
-
-
-
-
-
+<hr style="display:none" />
 <style>
 .topnav{
-    font-size:12px;
+    font-size:14px;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
