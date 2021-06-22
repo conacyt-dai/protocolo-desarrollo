@@ -809,9 +809,6 @@ Para proximas entregas se planea documentar
 .topnav ul li {
     margin-inline: 4px;
 }
-.topnav ul li:first-child {
-    margin-top: 4px;
-}
 .topnav ul li > a {
     color: #1e6bb8;
 }

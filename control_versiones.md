@@ -1,3 +1,17 @@
+<div class="topnav">
+  <a href="https://conacyt-dai.github.io/protocolo-desarrollo/">Página principal</a>
+  <a class="active" href="toma_de_requerimientos">Toma de requerimientos</a>
+  <a href="tecnologias_y_bibliotecas">Tecnologías y bibliotecas sugeridas</a>
+  <span>Control de versiones</span>
+  <a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a>
+  <a href="testing">Testing</a>
+  <a href="solicitud_de_recursos">Flujos para solicitud de recursos</a>
+  <a href="estilo_de_codigo">Estilo de código</a>
+</div>
+
+<hr />
+
+
 # Control de versiones con Git
 
 La gestión de códigos de desarrollo en la DAI pretende alinearse a los [lineamientos](https://conacyt-arquitectura.github.io/git/) propuestos por la Dirección de Arquitectura y Modelado para Cómputo aplicado a Datos, los cuales son una extensión de [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/). El versionamiento de código debe estár alineado a [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html). 
@@ -25,3 +39,28 @@ Convenciones de características de ramas:
 
 En los [lineamientos](https://conacyt-arquitectura.github.io/git/) se pueden consultar más detalles y algunos ejemplos.
 
+
+
+
+
+
+
+
+
+
+<style>
+.topnav{
+    font-size:12px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.topnav>a,span{
+    margin-inline:4px;
+    color:#1e6bb8;
+}
+.topnav>a:hover{
+    text-decoration:none;
+    color:#159957;
+}
+</style>
