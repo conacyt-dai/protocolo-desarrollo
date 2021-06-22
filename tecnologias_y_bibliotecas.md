@@ -1,3 +1,18 @@
+<div class="topnav">
+  <ul>
+    <li><a href="https://conacyt-dai.github.io/protocolo-desarrollo/">Página principal</a></li>
+    <li><a href="toma_de_requerimientos">Toma de requerimientos</a></li>
+    <li>Tecnologías y bibliotecas sugeridas</li>
+    <li><a href="control_versiones">Control de versiones</a></li>
+    <li><a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a></li>
+    <li><a href="testing">Testing</a></li>
+    <li><a href="solicitud_de_recursos">Flujos para solicitud de recursos</a></li>
+    <li><a href="estilo_de_codigo">Estilo de código</a></li>
+  </ul>
+</div>
+___
+
+
 # Tecnologías y bibliotecas sugeridads
 
 
@@ -773,3 +788,35 @@ Para proximas entregas se planea documentar
 * Jekill (dependiendo de si se segurá utilizando)
 * Amcharts
 * Bulma
+
+
+
+
+
+
+
+
+
+
+<style>
+.topnav ul {
+    font-size: 14px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.topnav ul li {
+    margin-inline: 4px;
+}
+.topnav ul li:first-child {
+    margin-top: 4px;
+}
+.topnav ul li > a {
+    color: #1e6bb8;
+}
+.topnav ul li > a:hover {
+    text-decoration: none;
+    color: #159957;
+}
+</style>

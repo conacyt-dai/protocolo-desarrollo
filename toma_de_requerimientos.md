@@ -1,5 +1,5 @@
 <div class="topnav">
-  <a href="./">Página principal</a>
+  <a href="https://conacyt-dai.github.io/protocolo-desarrollo/">Página principal</a>
   <a class="active" href="toma_de_requerimientos">Toma de requerimientos</a>
   <a href="tecnologias_y_bibliotecas">Tecnologías y bibliotecas sugeridas</a>
   <a href="control_versiones">Control de versiones</a>
@@ -49,16 +49,20 @@ El documento que comúnmente se usa como el levantamiento del requerimiento es e
 A su vez, se deben especificar con detalle los casos de uso y las historias de usuario, es decir todos los pasos que puede llevar a cabo el usuario con las funciones del sistema.
 
 
+
+
+
+
+
+
+
+
 <style>
 .topnav {
   overflow: hidden;
   background-color: #159957;
   background-image: linear-gradient(120deg, #155799, #159957);
-  position: absolute;
-  width: 100%;
-  left: 0;
 }
-
 .topnav a {
   float: left;
   color: #f2f2f2;
@@ -67,12 +71,10 @@ A su vez, se deben especificar con detalle los casos de uso y las historias de u
   text-decoration: none;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
-
 .topnav a:hover {
   background-color: rgba(255,255,255,0.2);
   color: #f2f2f2;
 }
-
 .topnav a.active {
   background-color: rgba(255,255,255,0.08);
   color: #f2f2f2;
