@@ -11,7 +11,7 @@
 <hr />
 
 
-# Tecnologías y bibliotecas sugeridads
+# Tecnologías y bibliotecas sugeridas
 
 
 ## Node
