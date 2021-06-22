@@ -1,3 +1,16 @@
+<div class="topnav">
+  <a href="https://conacyt-dai.github.io/protocolo-desarrollo/">Página principal</a>
+  <a href="toma_de_requerimientos">Toma de requerimientos</a>
+  <a href="tecnologias_y_bibliotecas">Tecnologías y bibliotecas sugeridas</a>
+  <a href="control_versiones">Control de versiones</a>
+  <a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a>
+  <span>Testing</span>
+  <a href="solicitud_de_recursos">Flujos para solicitud de recursos</a>
+  <a href="estilo_de_codigo">Estilo de código</a>
+</div>
+<hr />
+
+
 # Testing
 
 Un framework de pruebas unitarias permite escribir pruebas sobre un bloque de código, sin interferir en el entorno de desarrollo ni en la propia aplicación. Sirven para asegurarnos de que un bloque de código, función, clase o componente trabajan correctamente y abarca la mayoría de casos de uso que se le pueden dar, lo cual proporciona robustez y calidad a nuestro código.
@@ -55,3 +68,9 @@ ___
 
 Para proximas entregas se planea documentar 
 * pruebas en python
+
+
+
+
+<hr style="display:none" />
+<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:4px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>

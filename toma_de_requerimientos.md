@@ -1,6 +1,6 @@
 <div class="topnav">
   <a href="https://conacyt-dai.github.io/protocolo-desarrollo/">Página principal</a>
-  <a class="active" href="toma_de_requerimientos">Toma de requerimientos</a>
+  <span>Toma de requerimientos</span>
   <a href="tecnologias_y_bibliotecas">Tecnologías y bibliotecas sugeridas</a>
   <a href="control_versiones">Control de versiones</a>
   <a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a>
@@ -8,6 +8,8 @@
   <a href="solicitud_de_recursos">Flujos para solicitud de recursos</a>
   <a href="estilo_de_codigo">Estilo de código</a>
 </div>
+<hr />
+
 
 # Toma de requerimientos
 
@@ -52,31 +54,5 @@ A su vez, se deben especificar con detalle los casos de uso y las historias de u
 
 
 
-
-
-
-
-
-<style>
-.topnav {
-  overflow: hidden;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957);
-}
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 6px 8px;
-  text-decoration: none;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-}
-.topnav a:hover {
-  background-color: rgba(255,255,255,0.2);
-  color: #f2f2f2;
-}
-.topnav a.active {
-  background-color: rgba(255,255,255,0.08);
-  color: #f2f2f2;
-}
-</style>
+<hr style="display:none" />
+<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:4px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>

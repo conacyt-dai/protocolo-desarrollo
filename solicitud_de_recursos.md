@@ -1,3 +1,16 @@
+<div class="topnav">
+  <a href="https://conacyt-dai.github.io/protocolo-desarrollo/">Página principal</a>
+  <a href="toma_de_requerimientos">Toma de requerimientos</a>
+  <a href="tecnologias_y_bibliotecas">Tecnologías y bibliotecas sugeridas</a>
+  <a href="control_versiones">Control de versiones</a>
+  <a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a>
+  <a href="testing">Testing</a>
+  <span>Flujos para solicitud de recursos</span>
+  <a href="estilo_de_codigo">Estilo de código</a>
+</div>
+<hr />
+
+
 # Flujos para solicitud de recursos
 
 Esta sección trata sobre los procedimientos que se deben seguir cuando se requiere un nuevo repositorio para alojar los proyectos en el [gitlab de la CRIP](scm.crip.conacyt.mx/) o cuando necesita un servidor y un dominio para publicar los proyectos en ambiente de pruebas o de producción.
@@ -28,3 +41,10 @@ Una vez que tengas acceso, puedes solicitar que se haga un nuevo repositorio, as
 ## Servidores y dominios 
 
 Para solicitar servidores y dominios para los proyectos web de la DAI deberás hacer una copia del siguiente [formato](https://docs.google.com/document/d/1nbM6NEvh7FS8UaEP_ERs7tjnO78etUQpUb--l5p32Ak/edit?skip_itp2_check=true#heading=h.6sfvdepxsqpr) y llenar los campos en amarillo para especifiar los recursos requeridos. Este documento deberá ser remitido a la Dirección de infraestructura.
+
+
+
+
+
+<hr style="display:none" />
+<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:4px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>

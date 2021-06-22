@@ -1,16 +1,14 @@
 <div class="topnav">
-  <ul>
-    <li><a href="https://conacyt-dai.github.io/protocolo-desarrollo/">Página principal</a></li>
-    <li><a href="toma_de_requerimientos">Toma de requerimientos</a></li>
-    <li>Tecnologías y bibliotecas sugeridas</li>
-    <li><a href="control_versiones">Control de versiones</a></li>
-    <li><a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a></li>
-    <li><a href="testing">Testing</a></li>
-    <li><a href="solicitud_de_recursos">Flujos para solicitud de recursos</a></li>
-    <li><a href="estilo_de_codigo">Estilo de código</a></li>
-  </ul>
+  <a href="https://conacyt-dai.github.io/protocolo-desarrollo/">Página principal</a>
+  <a href="toma_de_requerimientos">Toma de requerimientos</a>
+  <span>Tecnologías y bibliotecas sugeridas</span>
+  <a href="control_versiones">Control de versiones</a>
+  <a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a>
+  <a href="testing">Testing</a>
+  <a href="solicitud_de_recursos">Flujos para solicitud de recursos</a>
+  <a href="estilo_de_codigo">Estilo de código</a>
 </div>
-___
+<hr />
 
 
 # Tecnologías y bibliotecas sugeridads
@@ -793,27 +791,5 @@ Para proximas entregas se planea documentar
 
 
 
-
-
-
-
-
-<style>
-.topnav ul {
-    font-size: 14px;
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.topnav ul li {
-    margin-inline: 4px;
-}
-.topnav ul li > a {
-    color: #1e6bb8;
-}
-.topnav ul li > a:hover {
-    text-decoration: none;
-    color: #159957;
-}
-</style>
+<hr style="display:none" />
+<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:4px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>
