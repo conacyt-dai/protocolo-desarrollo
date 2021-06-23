@@ -42,8 +42,6 @@ Una vez que tengas acceso, puedes solicitar que se haga un nuevo repositorio, as
 
 ## Servidores y dominios 
 
-Para solicitar servidores y dominios para los proyectos web de la DAI deberás hacer una copia del siguiente [formato](https://docs.google.com/document/d/1nbM6NEvh7FS8UaEP_ERs7tjnO78etUQpUb--l5p32Ak/edit?skip_itp2_check=true#heading=h.6sfvdepxsqpr) y llenar los campos en amarillo para especifiar los recursos requeridos. Este documento deberá ser remitido a la Dirección de infraestructura.
-
 Para solicitar servidores y dominios para los proyectos web de la DAI deberás hacer una copia del siguiente [formato](https://docs.google.com/document/d/1nbM6NEvh7FS8UaEP_ERs7tjnO78etUQpUb--l5p32Ak/edit?skip_itp2_check=true#heading=h.6sfvdepxsqpr) y llenar los campos en amarillo para especifiar los recursos requeridos. Este documento deberá ser remitido a la Dirección de infraestructura, a los encargados de crear los entornos. Después hay que darle seguimiento en el canal de whatsapp con Roger y Sergio. 
 
 ### Dirección de infraestructura:
