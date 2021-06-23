@@ -21,7 +21,9 @@ Esta sección trata sobre los procedimientos que se deben seguir cuando se requi
 Sí aún no tienes acceso al gitlab de la CRIP, deberás solicitarlo a la Dirección de Arquitectura especificando:
 
 * Nombre completo
-* Correo institucional
+* Correo institucional (comimsa o conacyt)
+
+Hasta ahora basta con escribirle a Daniel Pichardo por el slack con la información requerida.
 
 Una vez que tengas acceso, puedes solicitar que se haga un nuevo repositorio, así como el rol que deseas tener.  Para ello deberás solicitarlo a la Dirección de Arquitectura y especificar:
 
@@ -42,6 +44,16 @@ Una vez que tengas acceso, puedes solicitar que se haga un nuevo repositorio, as
 
 Para solicitar servidores y dominios para los proyectos web de la DAI deberás hacer una copia del siguiente [formato](https://docs.google.com/document/d/1nbM6NEvh7FS8UaEP_ERs7tjnO78etUQpUb--l5p32Ak/edit?skip_itp2_check=true#heading=h.6sfvdepxsqpr) y llenar los campos en amarillo para especifiar los recursos requeridos. Este documento deberá ser remitido a la Dirección de infraestructura.
 
+Para solicitar servidores y dominios para los proyectos web de la DAI deberás hacer una copia del siguiente [formato](https://docs.google.com/document/d/1nbM6NEvh7FS8UaEP_ERs7tjnO78etUQpUb--l5p32Ak/edit?skip_itp2_check=true#heading=h.6sfvdepxsqpr) y llenar los campos en amarillo para especifiar los recursos requeridos. Este documento deberá ser remitido a la Dirección de infraestructura, a los encargados de crear los entornos. Después hay que darle seguimiento en el canal de whatsapp con Roger y Sergio. 
+
+### Dirección de infraestructura:
+
+Director 
+* apolinar.martinez@conacyt.mx
+
+Encargados de crear los entornos
+* weblogic@conacyt.mx
+* weblogic.a@conacyt.mx
 
 
 
