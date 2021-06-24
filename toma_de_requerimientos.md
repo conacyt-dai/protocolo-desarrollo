@@ -3,9 +3,9 @@
   <span>Toma de requerimientos</span>
   <a href="tecnologias_y_bibliotecas">Tecnologías y bibliotecas sugeridas</a>
   <a href="control_versiones">Control de versiones</a>
-  <a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a>
+  <a href="documentacion_de_proyectos">Requerimientos de documentación</a>
   <a href="testing">Testing</a>
-  <a href="solicitud_de_recursos">Flujos para solicitud de recursos</a>
+  <a href="solicitud_de_recursos">Solicitud de recursos</a>
   <a href="estilo_de_codigo">Estilo de código</a>
 </div>
 <hr />
@@ -55,4 +55,4 @@ A su vez, se deben especificar con detalle los casos de uso y las historias de u
 
 
 <hr style="display:none" />
-<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:4px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>
+<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:10px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>

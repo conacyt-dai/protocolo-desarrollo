@@ -3,9 +3,9 @@
   <a href="toma_de_requerimientos">Toma de requerimientos</a>
   <a href="tecnologias_y_bibliotecas">Tecnologías y bibliotecas sugeridas</a>
   <a href="control_versiones">Control de versiones</a>
-  <a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a>
+  <a href="documentacion_de_proyectos">Requerimientos de documentación</a>
   <a href="testing">Testing</a>
-  <span>Flujos para solicitud de recursos</span>
+  <span>Solicitud de recursos</span>
   <a href="estilo_de_codigo">Estilo de código</a>
 </div>
 <hr />
@@ -47,4 +47,4 @@ Para solicitar servidores y dominios para los proyectos web de la DAI deberás h
 
 
 <hr style="display:none" />
-<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:4px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>
+<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:10px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>

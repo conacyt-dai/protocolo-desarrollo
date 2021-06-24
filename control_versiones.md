@@ -3,9 +3,9 @@
   <a href="toma_de_requerimientos">Toma de requerimientos</a>
   <a href="tecnologias_y_bibliotecas">Tecnologías y bibliotecas sugeridas</a>
   <span>Control de versiones</span>
-  <a href="documentacion_de_proyectos">Requerimientos mínimos de documentación</a>
+  <a href="documentacion_de_proyectos">Requerimientos de documentación</a>
   <a href="testing">Testing</a>
-  <a href="solicitud_de_recursos">Flujos para solicitud de recursos</a>
+  <a href="solicitud_de_recursos">Solicitud de recursos</a>
   <a href="estilo_de_codigo">Estilo de código</a>
 </div>
 <hr />
@@ -43,4 +43,4 @@ En los [lineamientos](https://conacyt-arquitectura.github.io/git/) se pueden con
 
 
 <hr style="display:none" />
-<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:4px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>
+<style>.topnav{font-size:1rem;display:flex;justify-content:center;flex-wrap:wrap;}.topnav>a,span{margin-inline:10px;}.topnav>a{color:#1e6bb8;}.topnav>a:hover{text-decoration:none;color:#159957;}</style>
