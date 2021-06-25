@@ -647,7 +647,7 @@ svg.append('g').call(d3.axisLeft(escalaY))
 
 Si deseas profundizar más en este tema, se hizo [este](https://github.com/jdanielgoh/taller-d3) repositorio para la DAI, el cual incluye ejemplos prácticos de lo que se ha visto hasta ahora y profundiza en otro tipo de funcionalidades de d3, como eventos y transiciones, responsividad y estilos elaborados, fuerzas y procesos creativos.
 
-Los ejemplos que aquí se han abordado están basados en [este tutoria](https://observablehq.com/@uvizlab/d3-tutorial-2-introduction-to-d3-with-observable?collection=@uvizlab/d3-tutorial) y se recomienda [este](https://observablehq.com/@d3/learn-d3-by-example?collection=@d3/learn-d3) otro que es más avanzado. Cabe mencionar que observabe es una especie de notebooks para crear visualizaciones de datos y la estructura puede parecer a veces un poco distinta la la de un script de js, por lo cual hay que leer los ejemplos con cuidado.
+Los ejemplos que aquí se han abordado están basados en [este tutorial](https://observablehq.com/@uvizlab/d3-tutorial-2-introduction-to-d3-with-observable?collection=@uvizlab/d3-tutorial) y se recomienda [este](https://observablehq.com/@d3/learn-d3-by-example?collection=@d3/learn-d3) otro que es más avanzado. Cabe mencionar que observabe es una especie de notebooks para crear visualizaciones de datos y la estructura puede parecer a veces un poco distinta a la de un script de js, por lo cual hay que leer los ejemplos con cuidado.
 
 
 ## OpenLayers
@@ -740,7 +740,7 @@ var map = new Map({
 });
 ```
 
-Para más ejemplo prácticos consulte [OpenLayers Examples](https://openlayers.org/en/latest/examples/index.html). Para la documentación competa de los componentes el [OpenLayers Apidoc](https://openlayers.org/en/latest/apidoc/).
+Para más ejemplos prácticos consulte [OpenLayers Examples](https://openlayers.org/en/latest/examples/index.html). Para la documentación completa de los componentes el [OpenLayers Apidoc](https://openlayers.org/en/latest/apidoc/).
 
 
 ## Simple statistics
